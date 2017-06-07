@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>H.Lの自习室</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="1l1.lol/"/>
+  <updated>2017-06-07T10:26:02.704Z</updated>
+  <id>1l1.lol/</id>
+  
+  <author>
+    <name>Haolu</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>目录结构</title>
+    <link href="1l1.lol/2017/06/03/%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/"/>
+    <id>1l1.lol/2017/06/03/目录结构/</id>
+    <published>2017-06-03T08:39:08.000Z</published>
+    <updated>2017-06-07T10:26:02.704Z</updated>
+    
+    <content type="html"><![CDATA[<p><html lang="en"><head><br>    <meta charset="UTF-8"><br>    <title></title></head></html></p>
+<p><style id="system" type="text/css">h1,h2,h3,h4,h5,h6,p,blockquote {    margin: 0;    padding: 0;}body {    font-family: “Helvetica Neue”, Helvetica, “Hiragino Sans GB”, Arial, sans-serif;    font-size: 13px;    line-height: 18px;    color: #737373;    margin: 10px 13px 10px 13px;}a {    color: #0069d6;}a:hover {    color: #0050a3;    text-decoration: none;}a img {    border: none;}p {    margin-bottom: 9px;}h1,h2,h3,h4,h5,h6 {    color: #404040;    line-height: 36px;}h1 {    margin-bottom: 18px;    font-size: 30px;}h2 {    font-size: 24px;}h3 {    font-size: 18px;}h4 {    font-size: 16px;}h5 {    font-size: 14px;}h6 {    font-size: 13px;}hr {    margin: 0 0 19px;    border: 0;    border-bottom: 1px solid #ccc;}blockquote {    padding: 13px 13px 21px 15px;    margin-bottom: 18px;    font-family:georgia,serif;    font-style: italic;}blockquote:before {    content:”C”;    font-size:40px;    margin-left:-10px;    font-family:georgia,serif;    color:#eee;}blockquote p {    font-size: 14px;    font-weight: 300;    line-height: 18px;    margin-bottom: 0;    font-style: italic;}code, pre {    font-family: Monaco, Andale Mono, Courier New, monospace;}code {    background-color: #fee9cc;    color: rgba(0, 0, 0, 0.75);    padding: 1px 3px;    font-size: 12px;    -webkit-border-radius: 3px;    -moz-border-radius: 3px;    border-radius: 3px;}pre {    display: block;    padding: 14px;    margin: 0 0 18px;    line-height: 16px;    font-size: 11px;    border: 1px solid #d9d9d9;    white-space: pre-wrap;    word-wrap: break-word;}pre code {    background-color: #fff;    color:#737373;    font-size: 11px;    padding: 0;}@media screen and (min-width: 768px) {    body {        width: 748px;        margin:10px auto;    }}</style><style id="custom" type="text/css"></style></p>
+<p><body marginheight="0"><p>Linux系统目录结构</p>
+<p></p></body></p>
+<p></p><p>Linux目录和Windows目录有着很大的不同，Linux目录类似一个树，最顶层是其根目录，如下图：</p>
+<p></p><p></p>
+<p></p><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1496727964928&amp;di=0bc32e54679a65650778b46ad4b477b6&amp;imgtype=0&amp;src=http%3A%2F%2Fimg5.ph.126.net%2F8aR6vsj1EswEgPU31pA2eQ%3D%3D%2F2389441077314086715.jpg" alt=""></p>
+<p></p><p></p>
+<p></p><p>/      处于linux系统树形结构的最顶端，它是linux文件系统的入口，所有的目录、文件、设备都在/之下。<br>每一个文件和目录从根目录开始。<br>只有root用户具有该目录下的写权限。请注意，/root是root用户的主目录，这与/.不一样</p>
+<p></p><p></p>
+<p></p><p>/bin   bin是Binary的缩写，存放着linux系统命令。<br>包含二进制可执行文件。<br>在单用户模式下，你需要使用的常见Linux命令都位于此目录下。系统的所有用户使用的命令都设在这里。<br>例如：ps、ls、ping、grep、cp</p>
+<p></p><p></p>
+<p></p><p>/dev   dev是Device的缩写。存放的是linux的外部设备，在linux中访问设备的方式和访问文件的方式是相同的。（注意：设备文件不是驱动程序。过去，在添加新磁盘或设备后，往往需要手动增加设备文件。现在通常我们不需要手动增加设备文件，运行一下service kudzu start ，系统就会自动配置相应的设备。）<br>包含设备文件。<br>这些包括终端设备、USB或连接到系统的任何设备。例如：/dev/tty1、/dev/usbmon0</p>
+<p></p><p></p>
+<p></p><p>/home  用户的主目录。在liunx系统中，每个用户都有一个自己的目录，一般该目录名是以用户的帐号命名的。<br>所有用户用home目录来存储他们的个人档案。<br>例如：/home/john、/home/nikita</p>
+<p></p><p></p>
+<p></p><p>/lib   这个目录里存放着系统最基本的动态链接共享库，包含许多被/bin/和/sbin/中的程序使用的库文件，目录/usr/lib/中含有更多用于用户程序的库文件。作用类似于windows里的DLL文件，几乎所有的应用程序都需要用到这些共享库。<br>包含支持位于/bin和/sbin下的二进制文件的库文件.<br>库文件名为 ld<em>或lib</em>.so.*<br>例如：ld-2.11.1.so，libncurses.so.5.7</p>
+<p></p><p></p>
+<p></p><p>/media  linux系统自动识别的一些设备，例如U盘、光驱、移动硬盘等，linux会把识别的设备挂载到这个目录下。<br>用于挂载可移动设备的临时目录。<br>举例来说，挂载CD-ROM的/media/cdrom，挂载软盘驱动器的/media/floppy;</p>
+<p></p><p></p>
+<p></p><p>/mnt   系统提供该目录是为了让用户临时挂载别的文件系统的，可以将光驱挂载到/mnt/上，然后进入该目录就可以查看光驱里的内容。<br>临时安装目录，系统管理员可以挂载文件系统。</p>
+<p></p><p></p>
+<p></p><p>/opt   主机额外安装软件所摆放的目录。默认是空的。<br>opt代表可选的。<br>包含从个别厂商的附加应用程序。<br>附加应用程序应该安装在/opt/或者/opt/的子目录下。</p>
+<p></p><p></p>
+<p></p><p>/root 超级管理员的用户主目录。</p>
+<p></p><p></p>
+<p></p><p>/selinux  这个目录是RedHat/CentOS所特有的目录，Selinux是一个安全机制，这个比较复杂，这个目录就是存放Selinux相关的文件的，一般我们安装操作系统的时候禁止使用它。</p>
+<p></p><p></p>
+<p></p><p>/sys   这是linux2.6内核的一个很大的变化。该目录下安装了2.6内核中新出现的一个文件系统sysfs，sysfs文件系统集成了下面3种文件系统的信息：针对进程信息的proc文件系统、针对设备的devfs文件系统以及针对伪终端的devpts文件系统。该文件系统是内核设备树的一个直观反映。该文件系统是内核设备树的一个直观反映。当一个内核对象被创建的时候，对应的文件和目录也在内核对象子系统种被创建。</p>
+<p></p><p></p>
+<p></p><p>/usr   包括与系统用户直接有关的文件和目录，例如应用程序及支持它们的库文件。类似于windows下的program files目录。<br>包含二进制文件、库文件、文档和二级程序的源代码。</p>
+<p></p><p></p>
+<p></p><p>/usr/bin中包含用户程序的二进制文件。如果你在/bin中找不到用户二进制文件，到/usr/bin目录看看。例如：at、awk、cc、less、scp。</p>
+<p></p><p></p>
+<p></p><p>/usr/sbin中包含系统管理员的二进制文件。如果你在/sbin中找不到系统二进制文件，到/usr/sbin目录看看。例如：atd、cron、sshd、useradd、userdel。</p>
+<p></p><p></p>
+<p></p><p>/usr/lib中包含了/usr/bin和/usr/sbin用到的库。</p>
+<p></p><p></p>
+<p></p><p>/usr/local中包含了从源安装的用户程序。例如，当你从源安装Apache，它会在/usr/local/apache2中。</p>
+<p></p><p></p>
+<p></p><p>/boot  包括内核和其它系统启动期间使用的文件。是启动linux时使用的核心文件，有连接文件和镜像文件。<br>包含引导加载程序相关的文件。<br>内核的initrd、vmlinux、grub文件位于/boot下。<br>例如：initrd.img-2.6.32-24-generic、vmlinuz-2.6.32-24-generic</p>
+<p></p><p></p>
+<p></p><p>/etc   存放系统配置文件和目录，非常重要，经常会用到它，要牢记。<br>包含所有程序所需的配置文件。<br>也包含了用于启动/停止单个程序的启动和关闭shell脚本。例如：/etc/resolv.conf、/etc/logrotate.conf</p>
+<p></p><p></p>
+<p></p><p>/lost+found  默认为空，被FSCK（file system check用来检查和维护不一致的文件系统。若系统掉电或磁盘发生问题，可利用fsck命令对文件系统进行检查）用来放置零散文件（没有名称的文件）。当系统非法关机后，这里就会存放一些文件。</p>
+<p></p><p></p>
+<p></p><p>/misc   存放杂项文件或目录，即那些用途或含义不明确的文件或目录可以存放在该目录下。  </p>
+<p></p><p></p>
+<p></p><p>/proc    操作系统运行时，进程（正在运行中的程序）信息及内核信息（比如cpu、硬盘分区、内存信息等）存放在这里。/proc目录是伪装的文件系统proc的挂载目录，proc并不是真正的文件系统。因此，这个目录是一个虚拟的目录，它是系统内存的映射，我们可以通过直接访问这个目录来获取系统信息。也就是说，这个目录的内容不在硬盘上而是在内存里。<br>包含系统进程的相关信息。<br>这是一个虚拟的文件系统，包含有关正在运行的进程的信息。例如：/proc/{pid}目录中包含的与特定pid相关的信息。<br>这是一个虚拟的文件系统，系统资源以文本信息形式存在。例如：/proc/uptime</p>
+<p></p><p></p>
+<p></p><p>/sbin  大多数涉及系统管理的命令都存放在该目录中，它是超级权限用户root的可执行命令存放地，普通用户无权限执行这个目录下的命令，凡是目录sbin中包含的命令都是root权限才能执行的。<br>就像/bin，/sbin同样也包含二进制可执行文件。<br>但是，在这个目录下的linux命令通常由系统管理员使用，对系统进行维护。例如：iptables、reboot、fdisk、ifconfig、swapon命令</p>
+<p></p><p></p>
+<p></p><p>/srv    该目录存放一些服务启动之后需要提取的数据。<br>srv代表服务。<br>包含服务器特定服务相关的数据。<br>例如，/srv/cvs包含cvs相关的数据。</p>
+<p></p><p></p>
+<p></p><p>/tmp    该目录用于存放临时文件，有时用户运行程序的时候，会产生一些临时文件。/tmp就是用来存放临时文件的。/var/tmp目录和该目录的作用是相似的。<br>包含系统和用户创建的临时文件。<br>当系统重新启动时，这个目录下的文件都将被删除。</p>
+<p></p><p></p>
+<p></p><p>/var    该目录的内容是经常变动的，/var下有/var/log目录用来存放系统日志的目录。/var/www目录用来定义Apache服务器站点存放目录。/var/lib用来存放一些库文件。<br>这个目录下可以找到内容可能增长的文件。<br>这包括 - 系统日志文件（/var/log）;包和数据库文件（/var/lib）;电子邮件（/var/mail）;打印队列（/var/spool）;锁文件（/var/lock）;多次重新启动需要的临时文件（/var/tmp）;</p>
+<p></p><p></p>
+<p></p><p>其它重要系统目录<br>/usr/bin   这个目录是可执行程序的目录，普通用户就有权限执行。当我们从系统自带的软件包安装一个程序时，他的可执行文件大多会放在这个目录。相似的目录是/usr/local/bin目录。有时/usr/bin中的文件是/usr/local/bin的链接文件。<br>/usr/sbin  这个目录也是可执行程序的目录，但大多存放涉及系统管理的命令。只有root权限才能执行，相似目录是/sbin或/usr/local/sbin或/usr/X11R6/sbin等。<br>/usr/src   内核源码默认的放置目录<br>/proc/cpuinfo  关于处理器的信息，如类似、厂家、型号和性能等。比如cat /proc/cpuinfo<br>/proc/devices  当前运行内核所配置的所有设备清单。<br>/proc/filesystems   当前运行内核所配置的文件系统。<br>/proc/dma    当前正在使用的DMA通道。<br>/proc/interrupts    正在使用的中断和曾经有多少个中断。<br>/proc/ioports    当前正在使用的I/O端口。<br>/etc/init.d    这个目录是用来存放系统或服务器以System V模式启动的脚本，这在以System V模式启动或初始化的系统中常见。比如RedHat Fedora。<br>/etc/xinetd.d    如果服务器是通过xinetd模式运行的，它的脚本要放在这个目录下。有些系统没有这个目录，比如Slackware，有些老的版本也没有。在Redhat Fedora中比较新的版本中存在。<br>/etc/rc.d    这是Slackware发行版中有的一个目录，是BSD方式启动脚本的存放地，比如定义网卡，服务器开启脚本等。<br>/etc/X11    是X-Window相关的配置文件存放地。<br>/usr/local    这个目录一般是用来存放用户自编译安装软件的存放目录。一般是通过源码包安装的软件，如果没有特别指定安装目录的话，一般是安装在这个目录中。<br>/usr/lib    该目录和/lib目录相似，是库文件的存储目录。存放一些常用的共享库。<br>/usr/share    该目录用于存放系统共用的东西，比如/usr/share/fonts是字体目录，是用户都共用的。<br>/usr/share/doc    该目录是Linux共享文档的存放地。<br>/usr/share/man    该目录是共享的帮助文件的存放地。<br>/var/adm    比如软件包安装信息、日志、管理信息等就存放在该目录下，在Slackware操作系统中是有这个目录的。在Fedora中好象没有。<br>/var/log    该目录用于存放系统日志。<br>/var/spool    打印机、邮件、代理服务器等假脱机目录存放在该目录下。</p>
+<p></p><p></p>
+<p></p><p> tree 命令<br> tree比较强大，但一般系统并不自带这个命令，需要手动下载安装：<code>yum install -y tree</code> 。文件很小，但功能可强大了！<br>(1)tree  -a 显示所有文件和目录</p>
+<p></p><p></p>
+<p></p><p>(2)tree -d 显示目录名称而非内容</p>
+<p></p><p></p>
+<p></p><p>(3)tree -f 在每个文件或目录之前，显示完整的相对路径名称</p>
+<p>ls命令</p>
+<p>直接ls ，它会显示当前目录下的所有文件和目录<br>ls + 目录（文件）名</p>
+<p>ls -l     显示文件或目录的详细信息</p>
+<p>ls -a     查看所有，包含隐藏文件<br>ls -ld     查看当前目录的信息<br>ctrl +l     清屏<br>ls -t     查看或指定目录下的文件按时间排序<br>ls -i     查看文件的inode号</p>
+<p>Linux文件类型；<br>Linux文件类型常见的有：普通文件、目录、字符设备文件、块设备文</p>
+<pre><code>1.普通文件（-表示，可用ls -l查看）
+
+2.目录（d）[在Linux中，任何东西都被看成文件，外设备也看成文件，注意是任何东西]
+
+3.字符设备文件（c）
+
+4.块设备文件（b）
+
+5.套接口文件（s）[如我们开启MySQL服务后，在/var/lib/mysql/下生成的mysql.sock文件，关闭MySQL服务后，这个文件就消失了]
+
+6.管道（p）[管道在Linux/UNIX中式非常有用的东西，必须掌握哈]
+
+7.符号链接文件（l）[有点儿像WIN下的快捷方式]
+</code></pre><p>which命令文件查找和比较 which命令用于查找并显示给定命令的绝对路径，环境变量PATH中保存了查找命令时需要遍历的目录。which指令会在环境变量$PATH设置的目录里查找符合条件的文件。也就是说，使用which命令，就可以看到某个系统命令是否存在，以及执行的到底是哪一个位置的命令</p>
+<p>alias命令Shell内建命令 alias命令用来设置指令的别名。我们可以使用该命令可以将一些较长的命令进行简化。使用alias时，用户必须使用单引号’’将原来的命令引起来，防止特殊字符导致错误。 alias命令的作用只局限于该次登入的操作。若要每次登入都能够使用这些命令别名，则可将相应的alias命令存放到bash的初始化文件<code>/etc/bashrc</code>中。</p>
+<p>语法：<br>which(选项)(参数)<br><code>[root@localhost ~]# which pwd 
+/bin/pwd 
+[root@localhost ~]# which adduser /usr/sbin/adduser</code></p>
+<p>语法：<br>alias(选项)(参数)<br><code>alias l=‘ls -lsh</code></p>
+<p>例如：<code>alias l=‘ls -lsh</code>‘将重新定义ls命令，现在只需输入l就可以列目录了。直接输入 alias 命令会列出当前系统中所有已经定义的命令别名。 要删除一个别名，可以使用 <code>unalias</code> 命令，如 <code>unalias -l</code></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;br&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;&lt;br&gt;    &lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;&lt;/p&gt;
+&lt;p&gt;&lt;style id=&quot;system&quot; type=&quot;text/css&quot;&gt;h1,h2
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>修改终端颜色</title>
+    <link href="1l1.lol/2017/05/08/%E4%BF%AE%E6%94%B9%E7%BB%88%E7%AB%AF%E9%A2%9C%E8%89%B2/"/>
+    <id>1l1.lol/2017/05/08/修改终端颜色/</id>
+    <published>2017-05-08T09:39:08.000Z</published>
+    <updated>2017-06-07T10:26:00.413Z</updated>
+    
+    <content type="html"><![CDATA[<p>要修改linux终端命令行颜色，我们需要用到PS1，PS1是Linux终端用户的一个环境变量，用来说明命令行提示符的设置。<br>在终端输入命令：<code>#set</code>即可在输出中找到关于PS1的定义如下： </p>
+<p><code> PS1=’[\u@\h \W]\$ ‘<br>　　PS1的定义中个常用的参数的含义如下：　　<br>　　\d ：#代表日期，格式为weekday month date<br>　　例如：”Mon Aug 1”<br>　　\H ：#完整的主机名称<br>　　\h ：#仅取主机的第一个名字<br>　　\t ：#显示时间为24小时格式，如：HH：MM：SS<br>　　\T ：#显示时间为12小时格式<br>　　\A ：#显示时间为24小时格式：HH：MM<br>　　\u ：#当前用户的账号名称<br>　　\v ：#BASH的版本信息<br>　　\w ：#完整的工作目录名称<br>　　\W ：#利用basename取得工作目录名称，所以只会列出最后一个目录<br>　　# ：#下达的第几个命令<br>　　\$ ：#提示字符，如果是root时，提示符为：# ，普通用户则为：$</code><br>　　<br>由此，我们可知linux默认的命令行提示信息为：[当前用户的账号名称@主机的第一个名字 工作目录的最后一项]#颜色的设置<br>在PS1中设置字符颜色的格式为：<code>[\e[F;Bm]</code>，其中“F“为字体颜色，编号为30-37，“B”为背景颜色，编号为40-47。颜色表如下：<br>　　　　F        B<br>　　　　30      40      黑色<br>　　　　31      41      红色<br>　　　　32      42      绿色<br>　　　　33      43      黄色<br>　　　　34      44      蓝色<br>　　　　35      45      紫红色<br>　　　　36      46      青蓝色<br>　　　　37      47      白色<br>　　　　<br>根据颜色表，套用入字符颜色设置格式中，就可以对linux终端命令行颜色进行个性化设置了。比如要设置命令行的格式为绿字黑底，显示当前用户的账号名称、主机的第一个名字、完整的当前工作目录名称、24小时格式时间，就可以使用如下的命令：</p>
+<p><code>#PS1=”[\e[33;40m][[\e[32;40m]\u[\e[33;40m]@\h [\e[35;40m]\W[\e[0m]]\$ “</code></p>
+<p>修改.bashrc文件<br>　　通过上面的设置只能改变当前终端的命令行格式，关闭这个终端，在重新打开的一个终端中命令行格式又会恢复到默认的形式。想要永久性的改变终端命令行格式，需要修改.bashrc文件。<br>　　<br>　　使用命令：<br>　　<code>cd /</code><br>　　<code>ls -l -a</code><br>　　就能看到.bashrc这个文件。<br>　　　　<br>　　使用命令<br>　　<code>#vim .bashrc</code><br>　　<br>　　在.bashrc文件中加入<br>　　<code>PS1=”[\e[33;40m][[\e[32;40m]\u[\e[33;40m]@\h [\e[35;40m]\W[\e[0m]]\$ “</code></p>
+<p>　　</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;要修改linux终端命令行颜色，我们需要用到PS1，PS1是Linux终端用户的一个环境变量，用来说明命令行提示符的设置。&lt;br&gt;在终端输入命令：&lt;code&gt;#set&lt;/code&gt;即可在输出中找到关于PS1的定义如下： &lt;/p&gt;
+&lt;p&gt;&lt;code&gt; PS1=’[\u@\h 
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>MAC地址修改</title>
+    <link href="1l1.lol/2017/05/01/%E5%9C%B0%E5%9D%80%E4%BF%AE%E6%94%B9/"/>
+    <id>1l1.lol/2017/05/01/地址修改/</id>
+    <published>2017-05-01T04:38:26.000Z</published>
+    <updated>2017-06-07T10:26:05.727Z</updated>
+    
+    <content type="html"><![CDATA[<p> 终端方式:</p>
+<p><code>openssl rand -hex 6 | sed ‘s/(..)/\1:/g; s/.$//‘</code></p>
+<p>运行这个生成一个新的Mac网卡地址</p>
+<p>然后执行</p>
+<p><code>sudo /System/Library/PrivateFrameworks/Apple80211.framework/Resources/airport -z</code></p>
+<p>断开Airport无线网卡连接.</p>
+<p><code>sudo ifconfig en0 ether d4:33:a3:ed:f2:12</code></p>
+<p>输入修改mac地址的命令</p>
+<p><code>networksetup -detectnewhardware&lt;/code</code></p>
+<p>然后重连网卡即可. </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt; 终端方式:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;openssl rand -hex 6 | sed ‘s/(..)/\1:/g; s/.$//‘&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;运行这个生成一个新的Mac网卡地址&lt;/p&gt;
+&lt;p&gt;然后执行&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo /Syste
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="1l1.lol/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Lorem ipsum dolor</title>
+    <link href="1l1.lol/2015/12/31/centos7%E5%AE%89%E8%A3%85/"/>
+    <id>1l1.lol/2015/12/31/centos7安装/</id>
+    <published>2015-12-31T06:49:13.000Z</published>
+    <updated>2017-06-07T11:50:01.231Z</updated>
+    
+    <content type="html"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, non numquam saepe ex ut. Deleniti culpa inventore consectetur nam saepe!</p>
+<p><div class="tip"><br>    预处理器很强大，但它只是编写 CSS 的辅助工具。出于对扩展和维护等方面的考虑，在大型项目中有必要使用预处理器构建 CSS；但是对于小型项目，原生的 CSS 可能是一种更好的选择。不要肆意使用预处理器！<br></div><br><a id="more"></a></p>
+<h2>VMware快照</h2><br>首先进入VMware 选择对应的主机 点击右键 选择快照<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E5%BF%AB%E7%85%A7.png" alt=""><br>点击快照-拍摄快照<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E5%BF%AB%E7%85%A71.png" alt=""><br><br><h2>putty</h2>
+
+<p>查看远程主机的IP 在putty输入对应的IP<br><img src="http://oqlwx55ng.bkt.clouddn.com/putty1.png" alt=""></p>
+<p>因为putty默认窗口大小为80列 修改为2000 这样可以查看更到更多的命令行数<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E8%A1%8C%E6%95%B0.png" alt=""></p>
+<p>选择窗口-外观-字体设置-修改设置 这里可以修改字体与字号<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E5%AD%97%E4%BD%93.png" alt=""></p>
+<p>选择窗口-转换-这里可以需要讲字符集修改为UTF-8<br> <img src="http://oqlwx55ng.bkt.clouddn.com/UTF8.png" alt=""></p>
+<h3>SSH登录时的两种认证方式</h3>
+
+<p>putty密钥认证</p>
+<p>打开puttygen 点击生成  生成完毕后 最好给密钥加密<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E7%94%9F%E6%88%90.png" alt=""><br>以下则为putty生成的公匙<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E5%85%AC%E9%92%A5.png" alt=""><br>对密匙进行加密后点击保存私钥 最好保存在一个比较隐秘的地方<br>生成完后需要进入远程主机<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81.png" alt=""><br>首先创建一个目录（此目录文件名称为固定 ）<br><code>mkdir /root/.ssh</code><br>为目录赋予权限<br><code>chmod 700 /root/.ssh</code><br><img src="http://oqlwx55ng.bkt.clouddn.com/%E6%9D%83%E9%99%90.png" alt=""><br>编辑<code>.ssh</code>文件将刚才生成的公钥添加进去<br><code>vi /root.ssh/authorized_keys</code><br><img src="http://oqlwx55ng.bkt.clouddn.com/%E6%B7%BB%E5%8A%A0%E5%AF%86%E5%8C%99.png" alt=""><br>完成后退出</p>
+<p>关闭<code>selinux</code>防火墙<br><code>setenforce 0</code><br>或者进入<br><code>/etc/selinux/config</code>修改<code>enlinux</code>选项为<code>disabled</code>格式为<code>enlinux=disabled</code><br><img src="http://oqlwx55ng.bkt.clouddn.com/%E9%98%B2%E7%81%AB%E5%A2%99.png" alt=""></p>
+<p> 登录<br> <img src="http://oqlwx55ng.bkt.clouddn.com/%E7%99%BB%E5%BD%95.png" alt=""></p>
+<p>root用户私钥存放地址<br><code>/root/.ssh/authorized_keys</code><br>一般用户私钥存放地址<br><code>/home/****/.ssh/authorized_keys</code><br>权限：目录700  文件600<br>SSH是可以放在其他目录 需要修改SSH配置文件</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, non numquam saepe ex ut. Deleniti culpa inventore consectetur nam saepe!&lt;/p&gt;
+&lt;p&gt;&lt;div class=&quot;tip&quot;&gt;&lt;br&gt;    预处理器很强大，但它只是编写 CSS 的辅助工具。出于对扩展和维护等方面的考虑，在大型项目中有必要使用预处理器构建 CSS；但是对于小型项目，原生的 CSS 可能是一种更好的选择。不要肆意使用预处理器！&lt;br&gt;&lt;/div&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>

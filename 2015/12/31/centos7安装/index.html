@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>Lorem ipsum dolor · H.Lの自习室</title><meta name="description" content="Lorem ipsum dolor sit amet, consectetur."><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-light.css"><link rel="search" type="application/opensearchdescription+xml" href="1l1.lol/atom.xml" title="H.Lの自习室"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="http://oqlwx55ng.bkt.clouddn.com/timg.jpg" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BOLG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://1l1.lol" target="_blank" class="nav-list-link">DISK</a></li><li class="nav-list-item"><a href="https://github.com/zhouhaolu" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">Lorem ipsum dolor</h1><div class="tags"></div><div class="post-info">Dec 31, 2015</div><div class="post-content"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, non numquam saepe ex ut. Deleniti culpa inventore consectetur nam saepe!</p>
+<p><div class="tip"><br>    预处理器很强大，但它只是编写 CSS 的辅助工具。出于对扩展和维护等方面的考虑，在大型项目中有必要使用预处理器构建 CSS；但是对于小型项目，原生的 CSS 可能是一种更好的选择。不要肆意使用预处理器！<br></div><br><a id="more"></a></p>
+<h2>VMware快照</h2><br>首先进入VMware 选择对应的主机 点击右键 选择快照<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E5%BF%AB%E7%85%A7.png" alt=""><br>点击快照-拍摄快照<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E5%BF%AB%E7%85%A71.png" alt=""><br><br><h2>putty</h2>
+
+<p>查看远程主机的IP 在putty输入对应的IP<br><img src="http://oqlwx55ng.bkt.clouddn.com/putty1.png" alt=""></p>
+<p>因为putty默认窗口大小为80列 修改为2000 这样可以查看更到更多的命令行数<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E8%A1%8C%E6%95%B0.png" alt=""></p>
+<p>选择窗口-外观-字体设置-修改设置 这里可以修改字体与字号<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E5%AD%97%E4%BD%93.png" alt=""></p>
+<p>选择窗口-转换-这里可以需要讲字符集修改为UTF-8<br> <img src="http://oqlwx55ng.bkt.clouddn.com/UTF8.png" alt=""></p>
+<h3>SSH登录时的两种认证方式</h3>
+
+<p>putty密钥认证</p>
+<p>打开puttygen 点击生成  生成完毕后 最好给密钥加密<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E7%94%9F%E6%88%90.png" alt=""><br>以下则为putty生成的公匙<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E5%85%AC%E9%92%A5.png" alt=""><br>对密匙进行加密后点击保存私钥 最好保存在一个比较隐秘的地方<br>生成完后需要进入远程主机<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81.png" alt=""><br>首先创建一个目录（此目录文件名称为固定 ）<br><code>mkdir /root/.ssh</code><br>为目录赋予权限<br><code>chmod 700 /root/.ssh</code><br><img src="http://oqlwx55ng.bkt.clouddn.com/%E6%9D%83%E9%99%90.png" alt=""><br>编辑<code>.ssh</code>文件将刚才生成的公钥添加进去<br><code>vi /root.ssh/authorized_keys</code><br><img src="http://oqlwx55ng.bkt.clouddn.com/%E6%B7%BB%E5%8A%A0%E5%AF%86%E5%8C%99.png" alt=""><br>完成后退出</p>
+<p>关闭<code>selinux</code>防火墙<br><code>setenforce 0</code><br>或者进入<br><code>/etc/selinux/config</code>修改<code>enlinux</code>选项为<code>disabled</code>格式为<code>enlinux=disabled</code><br><img src="http://oqlwx55ng.bkt.clouddn.com/%E9%98%B2%E7%81%AB%E5%A2%99.png" alt=""></p>
+<p> 登录<br> <img src="http://oqlwx55ng.bkt.clouddn.com/%E7%99%BB%E5%BD%95.png" alt=""></p>
+<p>root用户私钥存放地址<br><code>/root/.ssh/authorized_keys</code><br>一般用户私钥存放地址<br><code>/home/****/.ssh/authorized_keys</code><br>权限：目录700  文件600<br>SSH是可以放在其他目录 需要修改SSH配置文件</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/05/01/地址修改/" class="prev">PREV</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC8yOTAwNS81NTc0"><script>(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');</script><noscript> Please activate JavaScript for write a comment in LiveRe</noscript>
+</div><div class="copyright"><p>© undefined - 2017 <a href="1l1.lol">Haolu</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/MikeCoder/hexo-theme-gandalfr" target="_blank">hexo-theme-gandalfr</a>.</p></div></footer></div><script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" crossorigin="anonymous"></script><script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js" crossorigin="anonymous"></script><script>$(document).ready(function() { $('pre').each(function(i, block) { hljs.highlightBlock(block); }); });</script></body></html>
