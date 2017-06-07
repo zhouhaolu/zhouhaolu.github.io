@@ -187,10 +187,9 @@
     <link href="1l1.lol/2015/12/31/centos7%E5%AE%89%E8%A3%85/"/>
     <id>1l1.lol/2015/12/31/centos7安装/</id>
     <published>2015-12-31T06:49:13.000Z</published>
-    <updated>2017-06-07T11:50:01.231Z</updated>
+    <updated>2017-06-07T18:40:03.495Z</updated>
     
-    <content type="html"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, non numquam saepe ex ut. Deleniti culpa inventore consectetur nam saepe!</p>
-<p><div class="tip"><br>    预处理器很强大，但它只是编写 CSS 的辅助工具。出于对扩展和维护等方面的考虑，在大型项目中有必要使用预处理器构建 CSS；但是对于小型项目，原生的 CSS 可能是一种更好的选择。不要肆意使用预处理器！<br></div><br><a id="more"></a></p>
+    <content type="html"><![CDATA[<p><div class="tip"><br>    预处理器很强大，但它只是编写 CSS 的辅助工具。出于对扩展和维护等方面的考虑，在大型项目中有必要使用预处理器构建 CSS；但是对于小型项目，原生的 CSS 可能是一种更好的选择。不要肆意使用预处理器！<br></div><br><a id="more"></a></p>
 <h2>VMware快照</h2><br>首先进入VMware 选择对应的主机 点击右键 选择快照<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E5%BF%AB%E7%85%A7.png" alt=""><br>点击快照-拍摄快照<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E5%BF%AB%E7%85%A71.png" alt=""><br><br><h2>putty</h2>
 
 <p>查看远程主机的IP 在putty输入对应的IP<br><img src="http://oqlwx55ng.bkt.clouddn.com/putty1.png" alt=""></p>
@@ -208,8 +207,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, non numquam saepe ex ut. Deleniti culpa inventore consectetur nam saepe!&lt;/p&gt;
-&lt;p&gt;&lt;div class=&quot;tip&quot;&gt;&lt;br&gt;    预处理器很强大，但它只是编写 CSS 的辅助工具。出于对扩展和维护等方面的考虑，在大型项目中有必要使用预处理器构建 CSS；但是对于小型项目，原生的 CSS 可能是一种更好的选择。不要肆意使用预处理器！&lt;br&gt;&lt;/div&gt;&lt;br&gt;
+      &lt;p&gt;&lt;div class=&quot;tip&quot;&gt;&lt;br&gt;    预处理器很强大，但它只是编写 CSS 的辅助工具。出于对扩展和维护等方面的考虑，在大型项目中有必要使用预处理器构建 CSS；但是对于小型项目，原生的 CSS 可能是一种更好的选择。不要肆意使用预处理器！&lt;br&gt;&lt;/div&gt;&lt;br&gt;
     
     </summary>
     
