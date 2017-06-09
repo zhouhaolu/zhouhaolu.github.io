@@ -53,6 +53,38 @@
   </entry>
   
   <entry>
+    <title>Shadowsocks搭建</title>
+    <link href="1l1.lol/2017/06/01/Shadowsocks%E6%90%AD%E5%BB%BA/"/>
+    <id>1l1.lol/2017/06/01/Shadowsocks搭建/</id>
+    <published>2017-06-01T04:38:26.000Z</published>
+    <updated>2017-06-09T03:16:39.059Z</updated>
+    
+    <content type="html"><![CDATA[<p>#Shadowsocks搭建方法</p>
+<p>###VPS是什么</p>
+<p>VPS 全称 Virtual private server，虚拟专用服务器，是将一台服务器分区成多个虚拟专享服务器的服务。每个VPS可配置独立IP、内存、CPU资源、操作系统</p>
+<p>####bhjhbhbbbbj</p>
+<p>云服务器（Elastic Compute Service，简称 ECS），例如 阿里云ECS，是一种简单高效、处理能力可弹性伸缩的计算服务。 简单来说就是能在一组服务器资源（CPU、内存等）调度。而VPS只能在一台服务器分配资源。</p>
+<p>ECS灵活性、高可用性比VPS高，但价格也比VPS高。好像阿里云ECS，最低配CPU单核、内存1G、储存40G也要80元/月（还有带宽的账要算）；而国外很多VPS，标准配置CPU单核、内存1G、储存20G，只要5美元/月，而且按时收费。</p>
+<p>##搭建ShadowSocks</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#Shadowsocks搭建方法&lt;/p&gt;
+&lt;p&gt;###VPS是什么&lt;/p&gt;
+&lt;p&gt;VPS 全称 Virtual private server，虚拟专用服务器，是将一台服务器分区成多个虚拟专享服务器的服务。每个VPS可配置独立IP、内存、CPU资源、操作系统&lt;/p&gt;
+&lt;p&gt;#
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="1l1.lol/tags/Linux/"/>
+    
+      <category term="VPN" scheme="1l1.lol/tags/VPN/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux修改终端颜色</title>
     <link href="1l1.lol/2017/05/08/%E4%BF%AE%E6%94%B9%E7%BB%88%E7%AB%AF%E9%A2%9C%E8%89%B2/"/>
     <id>1l1.lol/2017/05/08/修改终端颜色/</id>
