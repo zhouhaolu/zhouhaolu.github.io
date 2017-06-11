@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>软硬链接 · H.Lの自习室</title><meta name="description" content="软硬链接 - Haolu"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-light.css"><link rel="search" type="application/opensearchdescription+xml" href="1l1.lol/atom.xml" title="H.Lの自习室"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="http://oqlwx55ng.bkt.clouddn.com/icon-tech.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BOLG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://1l1.lol" target="_blank" class="nav-list-link">DISK</a></li><li class="nav-list-item"><a href="https://github.com/zhouhaolu" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">软硬链接</h1><div class="tags"><a href="/tags/Linux/" class="tag-title">#Linux</a><a href="/tags/软链接/" class="tag-title">#软链接</a><a href="/tags/硬链接/" class="tag-title">#硬链接</a></div><div class="post-info">Jun 9, 2017</div><div class="post-content"><p></p><h6>软链接</h6><p></p>
+<blockquote>
+<p>软链接可以看作是Windows中的快捷方式,可以让你快速链接到目标档案或目录.软链接建立一个独立的文件,而这个文件会让数据的读取指向它link的那个档案的档名,由于只是作为指向的动作,所以当来源档案被删除之后,软连接的档案无法开启,因为找不到原始档名.连结档的内容只有档名,根据档名链接到正确的目录进一步取得目标档案的inode,最终就能够读取到正确的数据.如果目标档案的原始档名被删除了那么整个环节就进行不下去了.<br><a id="more"></a></p>
+</blockquote>
+<p>创建软链接</p>
+<p><code>ln -s /文件&amp;目录</code></p>
+<div class="tip"><br><br><p>以路径的形式存在。类似于Windows操作系统中的快捷方式</p><br><br>软链接可以 跨文件系统 ，硬链接不可以<br><br>软链接可以对一个不存在的文件名进行链接<br><br>软链接可以对目录进行链接<br></div>
+
+<p></p><h6>硬链接</h6><p></p>
+<blockquote>
+<p>硬链接不支持对目录做硬链接,只对文件有支持.硬链接是复制了源文件两个互为硬链接.</p>
+</blockquote>
+<p>创建软链接<br><code>ln 111.txt 222.txt</code></p>
+<div class="tip"><br><p>硬链接，以文件副本的形式存在。但不占用实际空间</p><br><br>不允许给目录创建硬链接<br><br>硬链接只有在同一个文件系统中才能创建<br></div></div></article></div></main><footer><div class="paginator"><a href="/2017/06/09/特殊权限/" class="next">NEXT</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC8yOTAwNS81NTc0"><script>(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');</script><noscript> Please activate JavaScript for write a comment in LiveRe</noscript>
+</div><div class="copyright"><p>© undefined - 2017 <a href="1l1.lol">Haolu</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/MikeCoder/hexo-theme-gandalfr" target="_blank">hexo-theme-gandalfr</a>.</p></div></footer></div><script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" crossorigin="anonymous"></script><script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js" crossorigin="anonymous"></script><script>$(document).ready(function() { $('pre').each(function(i, block) { hljs.highlightBlock(block); }); });</script></body></html>

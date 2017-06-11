@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="1l1.lol/"/>
-  <updated>2017-06-08T07:55:32.965Z</updated>
+  <updated>2017-06-11T20:42:15.384Z</updated>
   <id>1l1.lol/</id>
   
   <author>
@@ -16,75 +16,74 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>远程连接Putty</title>
-    <link href="1l1.lol/2018/04/02/%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5Putty/"/>
-    <id>1l1.lol/2018/04/02/远程连接Putty/</id>
-    <published>2018-04-02T06:49:13.000Z</published>
-    <updated>2017-06-08T07:55:32.965Z</updated>
+    <title>软硬链接</title>
+    <link href="1l1.lol/2017/06/09/%E8%BD%AF%E7%A1%AC%E9%93%BE%E6%8E%A5/"/>
+    <id>1l1.lol/2017/06/09/软硬链接/</id>
+    <published>2017-06-09T07:33:22.000Z</published>
+    <updated>2017-06-11T20:42:15.384Z</updated>
     
-    <content type="html"><![CDATA[<h2>VMware快照</h2><br>首先进入VMware 选择对应的主机 点击右键 选择快照<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E5%BF%AB%E7%85%A7.png" alt=""><br>点击快照-拍摄快照<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E5%BF%AB%E7%85%A71.png" alt=""><br><h2>putty</h2>
+    <content type="html"><![CDATA[<p></p><h6>软链接</h6><p></p>
+<blockquote>
+<p>软链接可以看作是Windows中的快捷方式,可以让你快速链接到目标档案或目录.软链接建立一个独立的文件,而这个文件会让数据的读取指向它link的那个档案的档名,由于只是作为指向的动作,所以当来源档案被删除之后,软连接的档案无法开启,因为找不到原始档名.连结档的内容只有档名,根据档名链接到正确的目录进一步取得目标档案的inode,最终就能够读取到正确的数据.如果目标档案的原始档名被删除了那么整个环节就进行不下去了.<br><a id="more"></a></p>
+</blockquote>
+<p>创建软链接</p>
+<p><code>ln -s /文件&amp;目录</code></p>
+<div class="tip"><br><br><p>以路径的形式存在。类似于Windows操作系统中的快捷方式</p><br><br>软链接可以 跨文件系统 ，硬链接不可以<br><br>软链接可以对一个不存在的文件名进行链接<br><br>软链接可以对目录进行链接<br></div>
 
-<p>查看远程主机的IP 在putty输入对应的IP<br><img src="http://oqlwx55ng.bkt.clouddn.com/putty1.png" alt=""></p>
-<p>因为putty默认窗口大小为80列 修改为2000 这样可以查看更到更多的命令行数<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E8%A1%8C%E6%95%B0.png" alt=""></p>
-<p>选择窗口-外观-字体设置-修改设置 这里可以修改字体与字号<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E5%AD%97%E4%BD%93.png" alt=""></p>
-<p>选择窗口-转换-这里可以需要讲字符集修改为UTF-8<br> <img src="http://oqlwx55ng.bkt.clouddn.com/UTF8.png" alt=""></p>
-<h3>SSH登录时的两种认证方式</h3>
-
-<p>putty密钥认证</p>
-<p>打开puttygen 点击生成  生成完毕后 最好给密钥加密<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E7%94%9F%E6%88%90.png" alt=""><br>以下则为putty生成的公匙<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E5%85%AC%E9%92%A5.png" alt=""><br>对密匙进行加密后点击保存私钥 最好保存在一个比较隐秘的地方<br>生成完后需要进入远程主机<br><img src="http://oqlwx55ng.bkt.clouddn.com/%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81.png" alt=""><br>首先创建一个目录（此目录文件名称为固定 ）<br><code>mkdir /root/.ssh</code><br>为目录赋予权限<br><code>chmod 700 /root/.ssh</code><br><img src="http://oqlwx55ng.bkt.clouddn.com/%E6%9D%83%E9%99%90.png" alt=""><br>编辑<code>.ssh</code>文件将刚才生成的公钥添加进去<br><code>vi /root.ssh/authorized_keys</code><br><img src="http://oqlwx55ng.bkt.clouddn.com/%E6%B7%BB%E5%8A%A0%E5%AF%86%E5%8C%99.png" alt=""><br>完成后退出</p>
-<p>关闭<code>selinux</code>防火墙<br><code>setenforce 0</code><br>或者进入<br><code>/etc/selinux/config</code>修改<code>enlinux</code>选项为<code>disabled</code>格式为<code>enlinux=disabled</code><br><img src="http://oqlwx55ng.bkt.clouddn.com/%E9%98%B2%E7%81%AB%E5%A2%99.png" alt=""></p>
-<p> 登录<br> <img src="http://oqlwx55ng.bkt.clouddn.com/%E7%99%BB%E5%BD%95.png" alt=""></p>
-<p>root用户私钥存放地址<br><code>/root/.ssh/authorized_keys</code><br>一般用户私钥存放地址<br><code>/home/****/.ssh/authorized_keys</code><br>权限：目录700  文件600<br>SSH是可以放在其他目录 需要修改SSH配置文件</p>
-]]></content>
+<p></p><h6>硬链接</h6><p></p>
+<blockquote>
+<p>硬链接不支持对目录做硬链接,只对文件有支持.硬链接是复制了源文件两个互为硬链接.</p>
+</blockquote>
+<p>创建软链接<br><code>ln 111.txt 222.txt</code></p>
+<div class="tip"><br><p>硬链接，以文件副本的形式存在。但不占用实际空间</p><br><br>不允许给目录创建硬链接<br><br>硬链接只有在同一个文件系统中才能创建<br></div>]]></content>
     
     <summary type="html">
     
-      &lt;h2&gt;VMware快照&lt;/h2&gt;&lt;br&gt;首先进入VMware 选择对应的主机 点击右键 选择快照&lt;br&gt;&lt;img src=&quot;http://oqlwx55ng.bkt.clouddn.com/%E5%BF%AB%E7%85%A7.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;点击快照-拍摄快照
+      &lt;p&gt;&lt;/p&gt;&lt;h6&gt;软链接&lt;/h6&gt;&lt;p&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;软链接可以看作是Windows中的快捷方式,可以让你快速链接到目标档案或目录.软链接建立一个独立的文件,而这个文件会让数据的读取指向它link的那个档案的档名,由于只是作为指向的动作,所以当来源档案被删除之后,软连接的档案无法开启,因为找不到原始档名.连结档的内容只有档名,根据档名链接到正确的目录进一步取得目标档案的inode,最终就能够读取到正确的数据.如果目标档案的原始档名被删除了那么整个环节就进行不下去了.&lt;br&gt;
     
     </summary>
     
     
       <category term="Linux" scheme="1l1.lol/tags/Linux/"/>
     
-      <category term="VMeare" scheme="1l1.lol/tags/VMeare/"/>
+      <category term="软链接" scheme="1l1.lol/tags/%E8%BD%AF%E9%93%BE%E6%8E%A5/"/>
     
-      <category term="Putty" scheme="1l1.lol/tags/Putty/"/>
+      <category term="硬链接" scheme="1l1.lol/tags/%E7%A1%AC%E9%93%BE%E6%8E%A5/"/>
     
   </entry>
   
   <entry>
-    <title>Shadowsocks搭建</title>
-    <link href="1l1.lol/2017/06/01/Shadowsocks%E6%90%AD%E5%BB%BA/"/>
-    <id>1l1.lol/2017/06/01/Shadowsocks搭建/</id>
-    <published>2017-06-01T04:38:26.000Z</published>
-    <updated>2017-06-09T03:42:08.070Z</updated>
+    <title>特殊权限</title>
+    <link href="1l1.lol/2017/06/09/%E7%89%B9%E6%AE%8A%E6%9D%83%E9%99%90/"/>
+    <id>1l1.lol/2017/06/09/特殊权限/</id>
+    <published>2017-06-09T04:38:26.000Z</published>
+    <updated>2017-06-11T20:20:15.256Z</updated>
     
-    <content type="html"><![CDATA[<h3>Shadowsocks搭建方法</h3>
-
+    <content type="html"><![CDATA[<h6>set_uid</h6><br>&gt;当普通用户需要更改密码,但是密码文件&lt;<code>/usr/bin/passwd</code>&gt;文件权限又是000,所以便有了s权限,passwd这个文件拥有set_uid权限,当普通用户执行带sit_uid权限的命令时候遍拥有了root用户的权限.<br><a id="more"></a><br><br><code>[][[]root[]@Enn []~[]]$ which passwd</code><br><br><code>/usr/bin/passwd</code><br><br><code>[][[]root[]@Enn []~[]]$ ls -l</code><br><br><code>/usr/bin/paspasswd</code><br><br><code>[[]root[]@Enn []~[]]$ ls -l</code><br><br><code>/usr/bin/passwd</code><br><br><code>-rwsr-xr-x 1 root root 25980 Nov 24  2015 /usr/bin/passwd</code><br><br>s权限便是set_uid权限<br><br><code>[][[]root[]@Enn []~[]]$ ls</code><br><br><code>/etc/shadow</code><br><br><code>/etc/shadow</code><br><br>shadow为密码文件<br><br><code>[][[]root[]@Enn []~[]]$ ls -l !$</code><br><br><code>ls -l /etc/shadow</code><br><br><code>---------- 1 root root 630 May 24 15:25 /etc/shadow</code><br><br>更改set-uid权限<br><br><code>chmod u=rws /usr/bin/ls</code><br><code>-rwSr-xr-x 1 root root 25980 Nov 24  2015 /usr/bin/ls</code><br><br>这时候权限变成了S权限 因为没有x权限<br><br><code>chmod u+s /urs/bin/ls</code><br><code>-rwsr-xr-x 1 root root 25980 Nov 24  2015 /usr/bin/ls</code><br><br>这个便有了小s权限 区别和大s一样<br><br><br><div class="tip"><br><br><p>必须是二进制文件</p><br><br>必须是可执行文件<br><br>其他非root其他用户执行带set_uid命令时临时拥有root用户的身份<br></div><br><br><br><h6>set_gid</h6><br>&gt;可以作用在文件和目录上,如果作用在文件上与set_uid作用类似,可以让执行这个文件的普通用户临时拥有所属组的身份,当作用在目录时设置set_gid后创建子目录以及文件的所属组会继承父目录保持一致。<br><br><code>[][[]root[]@Enn []~[]]# chmod  u=rwx /usr/bin/ls</code><br><br><code>[][[]root[]@Enn []~[]]# chmod g+s /usr/bin/ls</code><br><br><code>[][[]root[]@Enn []~[]]# ls -l /usr/bin/ls</code><br><br><code>-rwxr-sr-x. 1 root root 25980 Nov 24  2015 /usr/bin/ls</code><br><br><div class="tip"><br><br><p>不同的是set_gid是作用在组上,使普通用户临时拥有所属组的身份以及权限</p><br><br>不用于更换了角色<br><br>set_gid用户拥有所有组的权限<br></div><br><br><h6>set_bit</h6>
 
 <blockquote>
-<p>VPS 全称 Virtual private server，虚拟专用服务器，是将一台服务器分区成多个虚拟专享服务器的服务。每个VPS可配置独立IP、内存、CPU资源、操作系统</p>
-<p>云服务器（Elastic Compute Service，简称 ECS），例如 阿里云ECS，是一种简单高效、处理能力可弹性伸缩的计算服务。 简单来说就是能在一组服务器资源（CPU、内存等）调度。而VPS只能在一台服务器分配资源。</p>
-<p>ECS灵活性、高可用性比VPS高，但价格也比VPS高。好像阿里云ECS，最低配CPU单核、内存1G、储存40G也要80元/月（还有带宽的账要算）；而国外很多VPS，标准配置CPU单核、内存1G、储存20G，只要5美元/月，而且按时收费。</p>
+<p>stick_bit任何人对目录可写,但是别人无法删除文件所有者的文件,防止别人删除,如果删除的文件的目录有写入权限,则可以删除.</p>
 </blockquote>
-<p><code>搭建ShadowSocks</code></p>
-]]></content>
+<p><code>[][[]root[]@Enn []~[]]$ ls -ld /tmp/</code></p>
+<p><code>drwxrwxrwt. 3 root root 4096 Jun 12 03:07 /tmp/</code></p>
+<div class="tip"><br><br><p>非root用户无法删除</p><br></div>]]></content>
     
     <summary type="html">
     
-      &lt;h3&gt;Shadowsocks搭建方法&lt;/h3&gt;
-
-
-&lt;blockquote&gt;
-&lt;p&gt;VPS 全称 Virtual private server，虚拟专用服务器，是将一台服务器分区成多个虚拟专享服务器的服务。每个VPS可配置独立IP、内存、CPU资源、操作系统&lt;/p&gt;
-&lt;p&gt;云服
+      &lt;h6&gt;set_uid&lt;/h6&gt;&lt;br&gt;&amp;gt;当普通用户需要更改密码,但是密码文件&amp;lt;&lt;code&gt;/usr/bin/passwd&lt;/code&gt;&amp;gt;文件权限又是000,所以便有了s权限,passwd这个文件拥有set_uid权限,当普通用户执行带sit_uid权限的命令时候遍拥有了root用户的权限.&lt;br&gt;
     
     </summary>
     
     
       <category term="Linux" scheme="1l1.lol/tags/Linux/"/>
     
-      <category term="VPN" scheme="1l1.lol/tags/VPN/"/>
+      <category term="set_uid" scheme="1l1.lol/tags/set-uid/"/>
+    
+      <category term="set_gid" scheme="1l1.lol/tags/set-gid/"/>
+    
+      <category term="set_bit" scheme="1l1.lol/tags/set-bit/"/>
     
   </entry>
   
@@ -93,17 +92,20 @@
     <link href="1l1.lol/2017/05/08/%E4%BF%AE%E6%94%B9%E7%BB%88%E7%AB%AF%E9%A2%9C%E8%89%B2/"/>
     <id>1l1.lol/2017/05/08/修改终端颜色/</id>
     <published>2017-05-08T09:39:08.000Z</published>
-    <updated>2017-06-09T03:49:22.265Z</updated>
+    <updated>2017-06-11T20:12:24.450Z</updated>
     
-    <content type="html"><![CDATA[<p>要修改linux终端命令行颜色，我们需要用到PS1，PS1是Linux终端用户的一个环境变量，用来说明命令行提示符的设置。<br>在终端输入命令：<code>#set</code>即可在输出中找到关于PS1的定义如下：<br><a id="more"></a><br><code> PS1=’[\u@\h \W]\$ ‘<br>　　PS1的定义中个常用的参数的含义如下：　　<br>　　\d ：#代表日期，格式为weekday month date<br>　　例如：”Mon Aug 1”<br>　　\H ：#完整的主机名称<br>　　\h ：#仅取主机的第一个名字<br>　　\t ：#显示时间为24小时格式，如：HH：MM：SS<br>　　\T ：#显示时间为12小时格式<br>　　\A ：#显示时间为24小时格式：HH：MM<br>　　\u ：#当前用户的账号名称<br>　　\v ：#BASH的版本信息<br>　　\w ：#完整的工作目录名称<br>　　\W ：#利用basename取得工作目录名称，所以只会列出最后一个目录<br>　　# ：#下达的第几个命令<br>　　\$ ：#提示字符，如果是root时，提示符为：# ，普通用户则为：$</code><br>　<br>由此，我们可知linux默认的命令行提示信息为：[当前用户的账号名称@主机的第一个名字 工作目录的最后一项]#颜色的设置<br>在PS1中设置字符颜色的格式为：<code>[\e[F;Bm]</code>，其中“F“为字体颜色，编号为30-37，“B”为背景颜色，编号为40-47。颜色表如下：<br>　　　　F        B<br>　　　　30      40      黑色<br>　　　　31      41      红色<br>　　　　32      42      绿色<br>　　　　33      43      黄色<br>　　　　34      44      蓝色<br>　　　　35      45      紫红色<br>　　　　36      46      青蓝色<br>　　　　37      47      白色<br>　　　　<br>根据颜色表，套用入字符颜色设置格式中，就可以对linux终端命令行颜色进行个性化设置了。比如要设置命令行的格式为绿字黑底，显示当前用户的账号名称、主机的第一个名字、完整的当前工作目录名称、24小时格式时间，就可以使用如下的命令：</p>
-<p><code>#PS1=”[\e[33;40m][[\e[32;40m]\u[\e[33;40m]@\h [\e[35;40m]\W[\e[0m]]\$ “</code></p>
-<p>修改.bashrc文件<br>　　通过上面的设置只能改变当前终端的命令行格式，关闭这个终端，在重新打开的一个终端中命令行格式又会恢复到默认的形式。想要永久性的改变终端命令行格式，需要修改.bashrc文件。<br>　　<br>　　使用命令：<br>　　<code>cd /</code><br>　　<code>ls -l -a</code><br>　　就能看到.bashrc这个文件。<br>　　　　<br>　　使用命令<br>　　<code>#vim .bashrc</code><br>　　<br>　　在.bashrc文件中加入<br>　　<code>PS1=”[\e[33;40m][[\e[32;40m]\u[\e[33;40m]@\h [\e[35;40m]\W[\e[0m]]\$ “</code></p>
-<p>　　</p>
+    <content type="html"><![CDATA[<blockquote>
+<p>要修改linux终端命令行颜色，我们需要用到PS1，PS1是Linux终端用户的一个环境变量，用来说明命令行提示符的设置。<br>在终端输入命令：<code>#set</code>即可在输出中找到关于PS1的定义如下：</p>
+</blockquote>
+<a id="more"></a>
+<p><code> PS1=’[\u@\h \W]\$ ‘<br>　　PS1的定义中个常用的参数的含义如下：　　<br>　　\d ：#代表日期，格式为weekday month date<br>　　例如：”Mon Aug 1”<br>　　\H ：#完整的主机名称<br>　　\h ：#仅取主机的第一个名字<br>　　\t ：#显示时间为24小时格式，如：HH：MM：SS<br>　　\T ：#显示时间为12小时格式<br>　　\A ：#显示时间为24小时格式：HH：MM<br>　　\u ：#当前用户的账号名称<br>　　\v ：#BASH的版本信息<br>　　\w ：#完整的工作目录名称<br>　　\W ：#利用basename取得工作目录名称，所以只会列出最后一个目录<br>　　# ：#下达的第几个命令<br>　　\$ ：#提示字符，如果是root时，提示符为：# ，普通用户则为：$</code><br>　<br>修改.bashrc文件<br>　　通过上面的设置只能改变当前终端的命令行格式，关闭这个终端，在重新打开的一个终端中命令行格式又会恢复到默认的形式。想要永久性的改变终端命令行格式，需要修改.bashrc文件。<br>　　<br>　　使用命令：<br>　　<code>cd /</code><br>　　<br>　　<code>ls -l -a</code><br>　　<br>　　就能看到.bashrc这个文件。<br>　　　　<br>　　使用命令<br>　　<code>#vim .bashrc</code><br>　　<br>　　在.bashrc文件中加入<br>　　<br>　　<code>PS1=”[\e[33;40m][[\e[32;40m]\u[\e[33;40m]@\h [\e[35;40m]\W[\e[0m]]\$ “</code></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;要修改linux终端命令行颜色，我们需要用到PS1，PS1是Linux终端用户的一个环境变量，用来说明命令行提示符的设置。&lt;br&gt;在终端输入命令：&lt;code&gt;#set&lt;/code&gt;即可在输出中找到关于PS1的定义如下：&lt;br&gt;
+      &lt;blockquote&gt;
+&lt;p&gt;要修改linux终端命令行颜色，我们需要用到PS1，PS1是Linux终端用户的一个环境变量，用来说明命令行提示符的设置。&lt;br&gt;在终端输入命令：&lt;code&gt;#set&lt;/code&gt;即可在输出中找到关于PS1的定义如下：&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -119,23 +121,26 @@
     <link href="1l1.lol/2017/05/01/MAC%E5%9C%B0%E5%9D%80%E4%BF%AE%E6%94%B9/"/>
     <id>1l1.lol/2017/05/01/MAC地址修改/</id>
     <published>2017-05-01T04:38:26.000Z</published>
-    <updated>2017-06-08T07:48:49.049Z</updated>
+    <updated>2017-06-11T20:12:24.545Z</updated>
     
-    <content type="html"><![CDATA[<p> 终端方式:</p>
+    <content type="html"><![CDATA[<blockquote>
+<p>终端方式:</p>
 <p><code>openssl rand -hex 6 | sed ‘s/(..)/\1:/g; s/.$//‘</code></p>
 <p>运行这个生成一个新的Mac网卡地址</p>
 <p>然后执行</p>
 <p><code>sudo /System/Library/PrivateFrameworks/Apple80211.framework/Resources/airport -z</code><br><a id="more"></a></p>
+</blockquote>
 <p>断开Airport无线网卡连接.</p>
 <p> <code>sudo ifconfig en0 ether d4:33:a3:ed:f2:12</code></p>
 <p>输入修改mac地址的命令</p>
 <p><code>networksetup -detectnewhardware&lt;/code</code></p>
-<p>然后重连网卡即可. </p>
+<p>然后重连网卡即可.</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt; 终端方式:&lt;/p&gt;
+      &lt;blockquote&gt;
+&lt;p&gt;终端方式:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;openssl rand -hex 6 | sed ‘s/(..)/\1:/g; s/.$//‘&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;运行这个生成一个新的Mac网卡地址&lt;/p&gt;
 &lt;p&gt;然后执行&lt;/p&gt;
