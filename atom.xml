@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="1l1.lol/"/>
-  <updated>2017-06-12T03:16:21.563Z</updated>
+  <updated>2017-06-12T03:18:36.572Z</updated>
   <id>1l1.lol/</id>
   
   <author>
@@ -20,14 +20,15 @@
     <link href="1l1.lol/2017/06/11/%E6%90%9C%E7%B4%A2%E5%91%BD%E4%BB%A4/"/>
     <id>1l1.lol/2017/06/11/搜索命令/</id>
     <published>2017-06-10T19:38:26.000Z</published>
-    <updated>2017-06-12T03:16:21.563Z</updated>
+    <updated>2017-06-12T03:18:36.572Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p><code>find</code>用来在指定目录下查找文件</p>
-<p><code>which</code>用于查找并显示给定命令的绝对路径，环境变量PATH中保存了查找命令时需要遍历的目录</p>
-<p><code>whereis</code> 用来定位指令的二进制程序、源代码文件和man手册页等相关文件的路径</p>
-<p><code>locate</code> 需要安装（yum install -y mlocate）（与whereis类似也需要有同样的数据库才可以搜索，每晚24点自动更新，也可以选择手动生成  命令：updata）<br><a id="more"></a></p>
+<p><code>which</code>用于查找并显示给定命令的绝对路径,环境变量PATH中保存了查找命令时需要遍历的目录</p>
+<p><code>whereis</code> 用来定位指令的二进制程序,源代码文件和man手册页等相关文件的路径</p>
+<p><code>locate</code> 需要安装（yum install -y mlocate）与whereis类似也需要有同样的数据库才可以搜索每晚24点自动更新</p>
 </blockquote>
+<a id="more"></a>
 <p>语法</p>
 <p><code>find(选项)(参数)</code></p>
 <p>列出当前目录及子目录下所有文件和文件夹</p>
@@ -61,9 +62,9 @@
 <ul>
 <li><p>访问时间（-atime/天，-amin/分钟）：用户最近一次访问时间</p>
 </li>
-<li><p>。 修改时间（-mtime/天，-mmin/分钟）：文件最后一次修改时间。</p>
+<li><p>。 修改时间（-mtime/天，-mmin/分钟）：文件最后一次修改时间</p>
 </li>
-<li><p>变化时间（-ctime/天，-cmin/分钟）：文件数据元（例如权限等）最后一次修改时间。</p>
+<li><p>变化时间（-ctime/天，-cmin/分钟）：文件数据元（例如权限等）最后一次修改时间</p>
 </li>
 </ul>
 ]]></content>
@@ -72,9 +73,10 @@
     
       &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;find&lt;/code&gt;用来在指定目录下查找文件&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;which&lt;/code&gt;用于查找并显示给定命令的绝对路径，环境变量PATH中保存了查找命令时需要遍历的目录&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;whereis&lt;/code&gt; 用来定位指令的二进制程序、源代码文件和man手册页等相关文件的路径&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;locate&lt;/code&gt; 需要安装（yum install -y mlocate）（与whereis类似也需要有同样的数据库才可以搜索，每晚24点自动更新，也可以选择手动生成  命令：updata）&lt;br&gt;
+&lt;p&gt;&lt;code&gt;which&lt;/code&gt;用于查找并显示给定命令的绝对路径,环境变量PATH中保存了查找命令时需要遍历的目录&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;whereis&lt;/code&gt; 用来定位指令的二进制程序,源代码文件和man手册页等相关文件的路径&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;locate&lt;/code&gt; 需要安装（yum install -y mlocate）与whereis类似也需要有同样的数据库才可以搜索每晚24点自动更新&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
