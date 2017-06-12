@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>搜索命令 · H.Lの自习室</title><meta name="description" content="搜索命令 - Haolu"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-light.css"><link rel="search" type="application/opensearchdescription+xml" href="1l1.lol/atom.xml" title="H.Lの自习室"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="http://oqlwx55ng.bkt.clouddn.com/icon-tech.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BOLG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/zhouhaolu" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">搜索命令</h1><div class="tags"><a href="/tags/command/" class="tag-title">#command</a><a href="/tags/search/" class="tag-title">#search</a></div><div class="post-info">Jun 11, 2017</div><div class="post-content"><blockquote>
+<p><code>find</code>用来在指定目录下查找文件</p>
+<p><code>which</code>用于查找并显示给定命令的绝对路径，环境变量PATH中保存了查找命令时需要遍历的目录</p>
+<p><code>whereis</code> 用来定位指令的二进制程序、源代码文件和man手册页等相关文件的路径</p>
+<p><code>locate</code> 需要安装（yum install -y mlocate）（与whereis类似也需要有同样的数据库才可以搜索，每晚24点自动更新，也可以选择手动生成  命令：updata）<br><a id="more"></a></p>
+</blockquote>
+<p>语法</p>
+<p><code>find(选项)(参数)</code></p>
+<p>列出当前目录及子目录下所有文件和文件夹</p>
+<p><code>find .</code></p>
+<p>在/home目录下查找以.txt结尾的文件名</p>
+<p><code>find /home -name &quot;*.txt&quot;</code></p>
+<p>同上，但忽略大小写</p>
+<p><code>find /home -iname &quot;*.txt</code></p>
+<p>根据文件类型进行搜索</p>
+<p><code>find . -type 类型参数</code></p>
+<p>类型参数列表： </p>
+<ul>
+<li><p>f 普通文件</p>
+</li>
+<li><p>l 符号连接 </p>
+</li>
+<li><p>d 目录 </p>
+</li>
+<li><p>c 字符设备</p>
+</li>
+<li><p>b 块设备 </p>
+</li>
+<li><p>s 套接字 </p>
+</li>
+<li><p>p Fifo</p>
+</li>
+</ul>
+<p>根据文件时间戳进行搜索 </p>
+<p><code>find . -type f 时间戳</code></p>
+<p>UNIX/Linux文件系统每个文件都有三种时间戳：</p>
+<ul>
+<li><p>访问时间（-atime/天，-amin/分钟）：用户最近一次访问时间</p>
+</li>
+<li><p>。 修改时间（-mtime/天，-mmin/分钟）：文件最后一次修改时间。</p>
+</li>
+<li><p>变化时间（-ctime/天，-cmin/分钟）：文件数据元（例如权限等）最后一次修改时间。</p>
+</li>
+</ul>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/06/09/软硬链接/" class="next">NEXT</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC8yOTAwNS81NTc0"><script>(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');</script><noscript> Please activate JavaScript for write a comment in LiveRe</noscript>
+</div><div class="copyright"><p>© undefined - 2017 <a href="1l1.lol">Haolu</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/MikeCoder/hexo-theme-gandalfr" target="_blank">hexo-theme-gandalfr</a>.</p></div></footer></div><script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" crossorigin="anonymous"></script><script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js" crossorigin="anonymous"></script><script>$(document).ready(function() { $('pre').each(function(i, block) { hljs.highlightBlock(block); }); });</script></body></html>
