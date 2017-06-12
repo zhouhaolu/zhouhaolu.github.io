@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="1l1.lol/"/>
-  <updated>2017-06-12T03:18:36.572Z</updated>
+  <updated>2017-06-12T03:19:47.895Z</updated>
   <id>1l1.lol/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="1l1.lol/2017/06/11/%E6%90%9C%E7%B4%A2%E5%91%BD%E4%BB%A4/"/>
     <id>1l1.lol/2017/06/11/搜索命令/</id>
     <published>2017-06-10T19:38:26.000Z</published>
-    <updated>2017-06-12T03:18:36.572Z</updated>
+    <updated>2017-06-12T03:19:47.895Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p><code>find</code>用来在指定目录下查找文件</p>
@@ -62,7 +62,7 @@
 <ul>
 <li><p>访问时间（-atime/天，-amin/分钟）：用户最近一次访问时间</p>
 </li>
-<li><p>。 修改时间（-mtime/天，-mmin/分钟）：文件最后一次修改时间</p>
+<li><p>修改时间（-mtime/天，-mmin/分钟）：文件最后一次修改时间</p>
 </li>
 <li><p>变化时间（-ctime/天，-cmin/分钟）：文件数据元（例如权限等）最后一次修改时间</p>
 </li>
