@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="1l1.lol/"/>
-  <updated>2017-06-12T03:19:47.895Z</updated>
+  <updated>2017-06-12T06:51:50.824Z</updated>
   <id>1l1.lol/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文件互传</title>
+    <link href="1l1.lol/2017/06/12/Linux%E5%92%8Cwindows%E4%BA%92%E4%BC%A0%E6%96%87%E4%BB%B6/"/>
+    <id>1l1.lol/2017/06/12/Linux和windows互传文件/</id>
+    <published>2017-06-12T06:38:26.000Z</published>
+    <updated>2017-06-12T06:51:50.824Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>lrzsz是一个unix通信套件提供的X,Y,和ZModem文件传输协议可代替ftp上传和下载.需要注意的事这个命令无法在putty界面使用.</p>
+</blockquote>
+<a id="more"></a>
+<p></p><h6>首先安装lrzsz</h6><br><code>yum -y install lrzsz</code><p></p>
+<p>上传文件，执行命令rz，会跳出文件选择窗口，选择好文件，点击确认即可。<br><code>rz</code></p>
+<p>下载文件，执行命令sz<br><code>sz</code></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;lrzsz是一个unix通信套件提供的X,Y,和ZModem文件传输协议可代替ftp上传和下载.需要注意的事这个命令无法在putty界面使用.&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="1l1.lol/tags/Linux/"/>
+    
+      <category term="Windows" scheme="1l1.lol/tags/Windows/"/>
+    
+  </entry>
   
   <entry>
     <title>搜索命令</title>
