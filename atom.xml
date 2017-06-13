@@ -87,7 +87,7 @@
     <link href="1l1.lol/2017/06/12/2017-06-12%20NOTES/"/>
     <id>1l1.lol/2017/06/12/2017-06-12 NOTES/</id>
     <published>2017-06-12T09:38:26.000Z</published>
-    <updated>2017-06-13T17:01:35.309Z</updated>
+    <updated>2017-06-13T17:05:48.018Z</updated>
     
     <content type="html"><![CDATA[<h6>用户、用户组管理</h6>
 
@@ -184,6 +184,12 @@
 <p><code>useradd test</code></p>
 <p>删除用户</p>
 <p><code>userdel use1</code></p>
+<h6>windows与linux文件互传</h6>
+
+<p>lrzsz是一个unix通信套件提供的X,Y,和ZModem文件传输协议可代替ftp上传和下载.需要注意的事这个命令无法在putty界面使用.</p>
+<p></p><h6>首先安装lrzsz</h6><br><code>yum -y install lrzsz</code><p></p>
+<p>上传文件，执行命令rz，会跳出文件选择窗口，选择好文件，点击确认即可。<br><code>rz</code></p>
+<p>下载文件，执行命令sz<br><code>sz</code></p>
 ]]></content>
     
     <summary type="html">
@@ -211,36 +217,7 @@
     
       <category term="用户、用户组管理" scheme="1l1.lol/tags/%E7%94%A8%E6%88%B7%E3%80%81%E7%94%A8%E6%88%B7%E7%BB%84%E7%AE%A1%E7%90%86/"/>
     
-  </entry>
-  
-  <entry>
-    <title>文件互传</title>
-    <link href="1l1.lol/2017/06/12/Linux%E5%92%8Cwindows%E4%BA%92%E4%BC%A0%E6%96%87%E4%BB%B6/"/>
-    <id>1l1.lol/2017/06/12/Linux和windows互传文件/</id>
-    <published>2017-06-12T06:38:26.000Z</published>
-    <updated>2017-06-12T06:55:12.076Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>lrzsz是一个unix通信套件提供的X,Y,和ZModem文件传输协议可代替ftp上传和下载.需要注意的事这个命令无法在putty界面使用.</p>
-</blockquote>
-<a id="more"></a>
-<p></p><h6>首先安装lrzsz</h6><br><code>yum -y install lrzsz</code><p></p>
-<p>上传文件，执行命令rz，会跳出文件选择窗口，选择好文件，点击确认即可。<br><code>rz</code></p>
-<p>下载文件，执行命令sz<br><code>sz</code></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;lrzsz是一个unix通信套件提供的X,Y,和ZModem文件传输协议可代替ftp上传和下载.需要注意的事这个命令无法在putty界面使用.&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="linux" scheme="1l1.lol/tags/linux/"/>
-    
-      <category term="Windows" scheme="1l1.lol/tags/Windows/"/>
+      <category term="文件互传" scheme="1l1.lol/tags/%E6%96%87%E4%BB%B6%E4%BA%92%E4%BC%A0/"/>
     
   </entry>
   
