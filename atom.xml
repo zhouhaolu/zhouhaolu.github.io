@@ -87,12 +87,10 @@
     <link href="1l1.lol/2017/06/12/2017-06-12%20NOTES/"/>
     <id>1l1.lol/2017/06/12/2017-06-12 NOTES/</id>
     <published>2017-06-12T09:38:26.000Z</published>
-    <updated>2017-06-13T16:49:00.235Z</updated>
+    <updated>2017-06-13T16:59:46.507Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>Linux 下与用户管理相关的配置文件属于系统配置文件，在目录/etc 下,可通过 man 命令查看配置文件帮助信息, 命令格式为:  man 5配置文件名称,配置文件名称为简单名称,而非绝对路径名称．</p>
-</blockquote>
-  <a id="more"></a>
 <p>linux 用户管理涉及的配置文件有</p>
 <p>用户信息文件：<code>/etc/passwd</code></p>
 <p>密码文件：<code>/etc/shadow</code></p>
@@ -101,17 +99,10 @@
 <p>用户配置文件：<code>/etc/login.defs</code><br><code>etc/default/useradd</code></p>
 <p>新用户信息文件：<code>/etc/skel</code></p>
 <p>登录信息：<code>/etc/motd</code></p>
+</blockquote>
+<a id="more"></a>
 <p>我们先看一下用户信息文件里都放的什么</p>
-<p><code>[root@localhost ~]# cat /etc/passwd</code></p>
-<p><code>root:x:0:0:root:/root:/bin/bash</code></p>
-<p><code>daemon:x:2:2:daemon:/sbin:/sbin/nologin</code></p>
-<p><code>adm:x:3:4:adm:/var/adm:/sbin/nologin</code></p>
-<p><code>lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin</code></p>
-<p><code>sync:x:5:0:sync:/sbin:/bin/sync</code></p>
-<p><code>shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown</code></p>
-<p><code>halt:x:7:0:halt:/sbin:/sbin/halt</code></p>
-<p><code>mail:x:8:12:mail:/var/spool/mail:/sbin/nologin</code></p>
-<p><code>news:x:9:13:news:/etc/news:/sbin/nologin</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# cat /etc/passwd</div><div class="line"></div><div class="line">root:x:0:0:root:/root:/bin/bash</div><div class="line"></div><div class="line">daemon:x:2:2:daemon:/sbin:/sbin/nologin</div><div class="line"></div><div class="line">adm:x:3:4:adm:/var/adm:/sbin/nologin</div><div class="line"></div><div class="line">lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin</div><div class="line"></div><div class="line">sync:x:5:0:sync:/sbin:/bin/sync</div><div class="line"></div><div class="line">shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown</div><div class="line"></div><div class="line">halt:x:7:0:halt:/sbin:/sbin/halt</div><div class="line"></div><div class="line">mail:x:8:12:mail:/var/spool/mail:/sbin/nologin</div><div class="line"></div><div class="line">news:x:9:13:news:/etc/news:/sbin/nologin</div></pre></td></tr></table></figure>
 <p>标签：<br>Linux 用户管理—-用户信息与密码的配置文件详解， 密码,用户,配置…</p>
 <p>每一行内容存放一个用户的信息，每个用户信息有7部分组成</p>
 <p><code>root:x:0:0:root:/root:/bin/bash</code></p>
@@ -197,12 +188,24 @@
     
       &lt;blockquote&gt;
 &lt;p&gt;Linux 下与用户管理相关的配置文件属于系统配置文件，在目录/etc 下,可通过 man 命令查看配置文件帮助信息, 命令格式为:  man 5配置文件名称,配置文件名称为简单名称,而非绝对路径名称．&lt;/p&gt;
+&lt;p&gt;linux 用户管理涉及的配置文件有&lt;/p&gt;
+&lt;p&gt;用户信息文件：&lt;code&gt;/etc/passwd&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;密码文件：&lt;code&gt;/etc/shadow&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;用户组文件：&lt;code&gt;/etc/group&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;用户组密码文件：&lt;code&gt;/etc/gshadow&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;用户配置文件：&lt;code&gt;/etc/login.defs&lt;/code&gt;&lt;br&gt;&lt;code&gt;etc/default/useradd&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;新用户信息文件：&lt;code&gt;/etc/skel&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;登录信息：&lt;code&gt;/etc/motd&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
     
     
-      <category term="linux" scheme="1l1.lol/tags/linux/"/>
+      <category term="groupadd" scheme="1l1.lol/tags/groupadd/"/>
+    
+      <category term="useradd" scheme="1l1.lol/tags/useradd/"/>
+    
+      <category term="用户、用户组管理" scheme="1l1.lol/tags/%E7%94%A8%E6%88%B7%E3%80%81%E7%94%A8%E6%88%B7%E7%BB%84%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
