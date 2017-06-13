@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="1l1.lol/"/>
-  <updated>2017-06-13T02:10:31.525Z</updated>
+  <updated>2017-06-13T16:49:00.077Z</updated>
   <id>1l1.lol/</id>
   
   <author>
@@ -16,11 +16,66 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>用户配置文件和密码配置文件</title>
-    <link href="1l1.lol/2017/06/12/%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%92%8C%E5%AF%86%E7%A0%81%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/"/>
-    <id>1l1.lol/2017/06/12/用户配置文件和密码配置文件/</id>
+    <title>2017-06-13 NOTES</title>
+    <link href="1l1.lol/2017/06/14/2017-06-13%20NOTES/"/>
+    <id>1l1.lol/2017/06/14/2017-06-13 NOTES/</id>
+    <published>2017-06-13T16:38:26.000Z</published>
+    <updated>2017-06-13T16:49:00.077Z</updated>
+    
+    <content type="html"><![CDATA[<h6>usermod命令</h6>
+
+<p>语法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">usermod -u 改uid</div><div class="line"></div><div class="line">usermod -g 改用户组</div><div class="line"></div><div class="line">usermod -G 扩展组</div><div class="line"></div><div class="line">usermod -d改用户家目录</div><div class="line"></div><div class="line">usermod -s 改用户shell</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h6>用户密码管理</h6>
+
+<p>语法</p>
+<p><code>passwd</code> root用户更改密码</p>
+<p><code>passwd 用户名</code> 普通用户更改密码</p>
+<p><code>passwd -l 用户名</code> 锁定用户</p>
+<p><code>passwd -u 用户名</code> 解锁用户</p>
+<p><code>asermod -L 用户名</code> 锁定用户</p>
+<p><code>asermod -U 用户名</code> 解锁用户</p>
+<p><code>passwd --stdin 用户名</code> 给特定用户更改密码</p>
+<p><code>echo “密码” |passwd --stdin 用户名</code> 脚本更改特定用户密码</p>
+<p><code>echo  -e “密码”\n密码” |passwd 用户名</code> 可以在一行命令里面出现换行符</p>
+<div class="tip"><br><br>设定密码长度 最好超10位 包括大小写 数字 特殊字符 没有规律性<br><br></div>
+
+<h6>mkpasswd工具</h6>
+
+<p>mkpasswd可以生成密码工具</p>
+<p>首先需要安装工具</p>
+<p><code>yum install -y expect</code></p>
+<p>语法</p>
+<p><code>mkpasswd</code> 默认生成一个9位密码</p>
+<p><code>mkpasswd</code> -l 12 生成一个12位密码</p>
+<p><code>mkpasswd -l 12 -s 3</code> 生成一个12位密码 包括3个特殊符号</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6&gt;usermod命令&lt;/h6&gt;
+
+&lt;p&gt;语法&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;usermod -u 改uid&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;usermod -g 改用户组&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;usermod -G 扩展组&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;usermod -d改用户家目录&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;usermod -s 改用户shell&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="usermod" scheme="1l1.lol/tags/usermod/"/>
+    
+      <category term="passwd" scheme="1l1.lol/tags/passwd/"/>
+    
+      <category term="mkpasswd" scheme="1l1.lol/tags/mkpasswd/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2017-06-12 NOTES</title>
+    <link href="1l1.lol/2017/06/12/2017-06-12%20NOTES/"/>
+    <id>1l1.lol/2017/06/12/2017-06-12 NOTES/</id>
     <published>2017-06-12T09:38:26.000Z</published>
-    <updated>2017-06-13T02:10:31.525Z</updated>
+    <updated>2017-06-13T16:49:00.235Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>Linux 下与用户管理相关的配置文件属于系统配置文件，在目录/etc 下,可通过 man 命令查看配置文件帮助信息, 命令格式为:  man 5配置文件名称,配置文件名称为简单名称,而非绝对路径名称．</p>
@@ -113,6 +168,17 @@
 </tr>
 </tbody>
 </table>
+<h6>用户组管理</h6>
+
+<p>创建用户的同时会创建一个和用户名同样的组</p>
+<p>增加用户组</p>
+<p><code>groupadd  test</code></p>
+<p>删除用户组 （用户组内用户必须为空）</p>
+<p><code>groupdel test</code></p>
+<p>增加用户</p>
+<p><code>useradd test</code></p>
+<p>删除用户</p>
+<p><code>userdel use1</code></p>
 ]]></content>
     
     <summary type="html">

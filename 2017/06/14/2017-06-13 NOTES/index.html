@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>2017-06-13 NOTES · H.Lの自习室</title><meta name="description" content="2017-06-13 NOTES - Haolu"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-light.css"><link rel="search" type="application/opensearchdescription+xml" href="1l1.lol/atom.xml" title="H.Lの自习室"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="http://oqlwx55ng.bkt.clouddn.com/icon-tech.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BOLG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/zhouhaolu" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">2017-06-13 NOTES</h1><div class="tags"><a href="/tags/usermod/" class="tag-title">#usermod</a><a href="/tags/passwd/" class="tag-title">#passwd</a><a href="/tags/mkpasswd/" class="tag-title">#mkpasswd</a></div><div class="post-info">Jun 14, 2017</div><div class="post-content"><h6>usermod命令</h6>
+
+<p>语法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">usermod -u 改uid</div><div class="line"></div><div class="line">usermod -g 改用户组</div><div class="line"></div><div class="line">usermod -G 扩展组</div><div class="line"></div><div class="line">usermod -d改用户家目录</div><div class="line"></div><div class="line">usermod -s 改用户shell</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h6>用户密码管理</h6>
+
+<p>语法</p>
+<p><code>passwd</code> root用户更改密码</p>
+<p><code>passwd 用户名</code> 普通用户更改密码</p>
+<p><code>passwd -l 用户名</code> 锁定用户</p>
+<p><code>passwd -u 用户名</code> 解锁用户</p>
+<p><code>asermod -L 用户名</code> 锁定用户</p>
+<p><code>asermod -U 用户名</code> 解锁用户</p>
+<p><code>passwd --stdin 用户名</code> 给特定用户更改密码</p>
+<p><code>echo “密码” |passwd --stdin 用户名</code> 脚本更改特定用户密码</p>
+<p><code>echo  -e “密码”\n密码” |passwd 用户名</code> 可以在一行命令里面出现换行符</p>
+<div class="tip"><br><br>设定密码长度 最好超10位 包括大小写 数字 特殊字符 没有规律性<br><br></div>
+
+<h6>mkpasswd工具</h6>
+
+<p>mkpasswd可以生成密码工具</p>
+<p>首先需要安装工具</p>
+<p><code>yum install -y expect</code></p>
+<p>语法</p>
+<p><code>mkpasswd</code> 默认生成一个9位密码</p>
+<p><code>mkpasswd</code> -l 12 生成一个12位密码</p>
+<p><code>mkpasswd -l 12 -s 3</code> 生成一个12位密码 包括3个特殊符号</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/06/12/2017-06-12 NOTES/" class="next">NEXT</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC8yOTAwNS81NTc0"><script>(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');</script><noscript> Please activate JavaScript for write a comment in LiveRe</noscript>
+</div><div class="copyright"><p>© undefined - 2017 <a href="1l1.lol">Haolu</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/MikeCoder/hexo-theme-gandalfr" target="_blank">hexo-theme-gandalfr</a>.</p></div></footer></div><script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" crossorigin="anonymous"></script><script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js" crossorigin="anonymous"></script><script>$(document).ready(function() { $('pre').each(function(i, block) { hljs.highlightBlock(block); }); });</script></body></html>
