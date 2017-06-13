@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="1l1.lol/"/>
-  <updated>2017-06-13T02:15:30.138Z</updated>
+  <updated>2017-06-13T02:20:00.362Z</updated>
   <id>1l1.lol/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>搜索命令</title>
+    <title>用户组管理</title>
     <link href="1l1.lol/2017/06/13/%E7%94%A8%E6%88%B7%E7%BB%84%E7%AE%A1%E7%90%86/"/>
     <id>1l1.lol/2017/06/13/用户组管理/</id>
     <published>2017-06-12T19:38:26.000Z</published>
-    <updated>2017-06-13T02:15:30.138Z</updated>
+    <updated>2017-06-13T02:20:00.362Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p><code>find</code>用来在指定目录下查找文件</p>
@@ -90,9 +90,7 @@
     </summary>
     
     
-      <category term="command" scheme="1l1.lol/tags/command/"/>
-    
-      <category term="search" scheme="1l1.lol/tags/search/"/>
+      <category term="group" scheme="1l1.lol/tags/group/"/>
     
   </entry>
   
