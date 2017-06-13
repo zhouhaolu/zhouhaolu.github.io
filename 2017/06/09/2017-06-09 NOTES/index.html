@@ -1,9 +1,8 @@
 <!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>2017-06-09 NOTS · H.Lの自习室</title><meta name="description" content="2017-06-09 NOTS - Haolu"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-light.css"><link rel="search" type="application/opensearchdescription+xml" href="1l1.lol/atom.xml" title="H.Lの自习室"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="http://oqlwx55ng.bkt.clouddn.com/icon-tech.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BOLG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/zhouhaolu" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">2017-06-09 NOTS</h1><div class="tags"><a href="/tags/set-uid/" class="tag-title">#set_uid</a><a href="/tags/set-gid/" class="tag-title">#set_gid</a><a href="/tags/set-bit/" class="tag-title">#set_bit</a><a href="/tags/软链接/" class="tag-title">#软链接</a><a href="/tags/硬链接/" class="tag-title">#硬链接</a></div><div class="post-info">Jun 9, 2017</div><div class="post-content"><h6>set_uid</h6>
 
 <blockquote>
-<p>当普通用户需要更改密码,但是密码文件<code>/usr/bin/passwd</code>文件权限又是000,所以便有了s权限,passwd这个文件拥有set_uid权限,当普通用户执行带sit_uid权限的命令时候遍拥有了root用户的权限.</p>
+<p>当普通用户需要更改密码,但是密码文件<code>/usr/bin/passwd</code>文件权限又是000,所以便有了s权限,passwd这个文件拥有set_uid权限,当普通用户执行带sit_uid权限的命令时候遍拥有了root用户的权限.<br><a id="more"></a></p>
 </blockquote>
-<a id="more"></a>
 <p><code>[][[]root[]@Enn []~[]]$ which passwd</code></p>
 <p><code>/usr/bin/passwd</code> </p>
 <p><code>[][[]root[]@Enn []~[]]$ ls -l</code></p>
@@ -51,7 +50,7 @@
 
 <p>硬链接不支持对目录做硬链接,只对文件有支持.硬链接是复制了源文件两个互为硬链接.</p>
 <p>创建软链接<br><code>ln 111.txt 222.txt</code></p>
-<div class="tip"><br><p>硬链接，以文件副本的形式存在。但不占用实际空间</p><br><br>不允许给目录创建硬链接<br><br>硬链接只有在同一个文件系统中才能创建<br></div></div></article></div></main><footer><div class="paginator"><a href="/2017/06/09/2017-06-09 NOTES/" class="prev">PREV</a><a href="/2017/06/02/2017-06-02 NOTES/" class="next">NEXT</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC8yOTAwNS81NTc0"><script>(function(d, s) {
+<div class="tip"><br><p>硬链接，以文件副本的形式存在。但不占用实际空间</p><br><br>不允许给目录创建硬链接<br><br>硬链接只有在同一个文件系统中才能创建<br></div></div></article></div></main><footer><div class="paginator"><a href="/2017/06/12/2017-06-11 NOTES/" class="prev">PREV</a><a href="/2017/06/09/2017-06-09 NOTS/" class="next">NEXT</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC8yOTAwNS81NTc0"><script>(function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
 
     if (typeof LivereTower === 'function') { return; }
