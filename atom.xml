@@ -87,9 +87,11 @@
     <link href="1l1.lol/2017/06/12/2017-06-12%20NOTES/"/>
     <id>1l1.lol/2017/06/12/2017-06-12 NOTES/</id>
     <published>2017-06-12T09:38:26.000Z</published>
-    <updated>2017-06-13T16:59:46.507Z</updated>
+    <updated>2017-06-13T17:01:35.309Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
+    <content type="html"><![CDATA[<h6>用户、用户组管理</h6>
+
+<blockquote>
 <p>Linux 下与用户管理相关的配置文件属于系统配置文件，在目录/etc 下,可通过 man 命令查看配置文件帮助信息, 命令格式为:  man 5配置文件名称,配置文件名称为简单名称,而非绝对路径名称．</p>
 <p>linux 用户管理涉及的配置文件有</p>
 <p>用户信息文件：<code>/etc/passwd</code></p>
@@ -186,7 +188,9 @@
     
     <summary type="html">
     
-      &lt;blockquote&gt;
+      &lt;h6&gt;用户、用户组管理&lt;/h6&gt;
+
+&lt;blockquote&gt;
 &lt;p&gt;Linux 下与用户管理相关的配置文件属于系统配置文件，在目录/etc 下,可通过 man 命令查看配置文件帮助信息, 命令格式为:  man 5配置文件名称,配置文件名称为简单名称,而非绝对路径名称．&lt;/p&gt;
 &lt;p&gt;linux 用户管理涉及的配置文件有&lt;/p&gt;
 &lt;p&gt;用户信息文件：&lt;code&gt;/etc/passwd&lt;/code&gt;&lt;/p&gt;
