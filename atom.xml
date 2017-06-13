@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="1l1.lol/"/>
-  <updated>2017-06-13T16:49:00.077Z</updated>
+  <updated>2017-06-13T16:54:43.227Z</updated>
   <id>1l1.lol/</id>
   
   <author>
@@ -20,12 +20,18 @@
     <link href="1l1.lol/2017/06/14/2017-06-13%20NOTES/"/>
     <id>1l1.lol/2017/06/14/2017-06-13 NOTES/</id>
     <published>2017-06-13T16:38:26.000Z</published>
-    <updated>2017-06-13T16:49:00.077Z</updated>
+    <updated>2017-06-13T16:54:43.227Z</updated>
     
     <content type="html"><![CDATA[<h6>usermod命令</h6>
 
+<blockquote>
 <p>语法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">usermod -u 改uid</div><div class="line"></div><div class="line">usermod -g 改用户组</div><div class="line"></div><div class="line">usermod -G 扩展组</div><div class="line"></div><div class="line">usermod -d改用户家目录</div><div class="line"></div><div class="line">usermod -s 改用户shell</div></pre></td></tr></table></figure>
+<p><code>usermod -u</code> 改uid</p>
+<p><code>usermod -g</code> 改用户组</p>
+<p><code>usermod -G</code> 扩展组</p>
+<p><code>usermod -d</code> 改用户家目录</p>
+<p><code>usermod -s</code> 改用户shell</p>
+</blockquote>
 <a id="more"></a>
 <h6>用户密码管理</h6>
 
@@ -56,8 +62,14 @@
     
       &lt;h6&gt;usermod命令&lt;/h6&gt;
 
+&lt;blockquote&gt;
 &lt;p&gt;语法&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;usermod -u 改uid&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;usermod -g 改用户组&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;usermod -G 扩展组&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;usermod -d改用户家目录&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;usermod -s 改用户shell&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;usermod -u&lt;/code&gt; 改uid&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;usermod -g&lt;/code&gt; 改用户组&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;usermod -G&lt;/code&gt; 扩展组&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;usermod -d&lt;/code&gt; 改用户家目录&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;usermod -s&lt;/code&gt; 改用户shell&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
