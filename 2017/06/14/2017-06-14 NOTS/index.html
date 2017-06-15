@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>2017-06-14 NOTS · H.Lの自习室</title><meta name="description" content="2017-06-14 NOTS - Haolu"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-light.css"><link rel="search" type="application/opensearchdescription+xml" href="1l1.lol/atom.xml" title="H.Lの自习室"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="http://oqlwx55ng.bkt.clouddn.com/icon-tech.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BOLG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/zhouhaolu" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">2017-06-14 NOTS</h1><div class="tags"><a href="/tags/su/" class="tag-title">#su</a><a href="/tags/sudo/" class="tag-title">#sudo</a></div><div class="post-info">Jun 14, 2017</div><div class="post-content"><h6>su</h6>
+
+<p>su命令用于切换当前用户身份到其他用户身份,变更时须输入所要变更的用户帐号与密码.</p>
+<p>语法</p>
+<p><code>su 选项 参数</code></p>
+<p>选项</p>
+<p>su - 彻底切换到其他用户下</p>
+<p>-c 执行完指定的命令后,即恢复原来的身份</p>
+<a id="more"></a>
+<p>sudo</p>
+<p>sudo可以为普通用户临时授权root用户的权限,用户使用sudo时，必须先输入密码,之后有5分钟的有效期限，超过期限则必须重新输入密码.</p>
+<p>语法</p>
+<p><code>sudo 选项 参数</code></p>
+<p>选项</p>
+<p>-b：在后台执行指令； </p>
+<p>-h：显示帮助；</p>
+<p>-H：将HOME环境变量设为新身份的HOME环境变量；</p>
+<p>-k：结束密码的有效期限,也就是下次再执行sudo时便需要输入密码；</p>
+<p>-l：列出目前用户可执行与无法执行的指令；</p>
+<p>-p：改变询问密码的提示符号；</p>
+<p>-s：执行指定的shell； -u&lt;用户&gt;：以指定的用户作为新的身份.若不加上此参数，则预设以root作为新的身份；</p>
+<p>-v：延长密码有效期限5分钟；</p>
+<p>sudo配置</p>
+<p><code>visudo</code>此文件为sudo配置文件</p>
+<p>文件路径/etc/sudo，不要使用vi打开</p>
+<p><code>## Allo root to run any commands anywhere</code></p>
+<p>允许ROOT用户允许所有程序命令</p>
+<p><code>root    ALL=(ALL)       /usr/bin/ls, /usr/bin/mv</code></p>
+<p>指定用户拥有特定用户以root权限执行<code>ls mv 命令</code></p>
+<p><code>test    ALL=(ALL)       NOPASSSWD：/usr/bin/ls，/usr/bin/mv</code></p>
+<p>以root权限执行特定命令 且不输入密码</p>
+<p>以上为sudo的核心文件配置</p>
+<h6>限制ROOT远程登录</h6>
+
+<ul>
+<li>方法1</li>
+</ul>
+<p>切换到root用户，运行visudo命令</p>
+<p>在打开的配置文件中，找到<code>root ALL=(ALL) ALL</code>，在下面添加一行</p>
+<p><code>xxx ALL=(ALL) ALL 其中xxx为要加入的用户名称</code></p>
+<p> 切换到root用户，运行visudo命令</p>
+<ul>
+<li>方法2</li>
+</ul>
+<p>编辑 <code>/etc/ssh/sshd_config</code></p>
+<p>修改<code>PermitRootLogin1</code>将<code>yes</code>改为<code>no</code></p>
+<p>重启ssh服务</p>
+<p><code>systemctl restart service sshd.service</code></p>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/06/14/2017-06-13 NOTES/" class="next">NEXT</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC8yOTAwNS81NTc0"><script>(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');</script><noscript> Please activate JavaScript for write a comment in LiveRe</noscript>
+</div><div class="copyright"><p>© undefined - 2017 <a href="1l1.lol">Haolu</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/MikeCoder/hexo-theme-gandalfr" target="_blank">hexo-theme-gandalfr</a>.</p></div></footer></div><script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" crossorigin="anonymous"></script><script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js" crossorigin="anonymous"></script><script>$(document).ready(function() { $('pre').each(function(i, block) { hljs.highlightBlock(block); }); });</script></body></html>
