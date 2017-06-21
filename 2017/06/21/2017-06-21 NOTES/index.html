@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>2017-06-21 NOTES · H.Lの自习室</title><meta name="description" content="2017-06-21 NOTES - Haolu"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-light.css"><link rel="search" type="application/opensearchdescription+xml" href="1l1.lol/atom.xml" title="H.Lの自习室"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="http://oqlwx55ng.bkt.clouddn.com/icon-tech.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BOLG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/zhouhaolu" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">2017-06-21 NOTES</h1><div class="tags"><a href="/tags/vim/" class="tag-title">#vim</a></div><div class="post-info">Jun 21, 2017</div><div class="post-content"><h6>进入编辑模式</h6>
+
+<p>编辑模式可以对文本进行编辑</p>
+<p>I 在行首插入</p>
+<p>i在光标位置</p>
+<p>o 光标坐在行的下一行写</p>
+<p>O光标所在的上面一行写入</p>
+<p>a光标所在的字符后写入</p>
+<p>A在行末开始写入</p>
+<a id="more"></a>
+<h6>vim命令模式</h6>
+
+<p>替换字符</p>
+<p>:1,200s/dnsmasq/maoge/g    1-200行中的dnsmasq替换橙maoge/1-100行全局替换，如果不加s只替换一行中的第一个</p>
+<p>替换所有字符</p>
+<p>::1,$s/dnsmasq/maoge/g   替换全文所有的dnsmasq为maoge</p>
+<p>替换带有/的路径方法</p>
+<p>:1,$s/\/etc\/hosts/\maoge/g</p>
+<p>:1,$s#/etc/hosts#maoge#g</p>
+<p>4、去掉高亮</p>
+<p>:nohl</p>
+<p>5、:x 也可以保存 不会修改mtime</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/06/23/2017-06-20 NOTES/" class="prev">PREV</a><a href="/2017/06/19/2017-06-19 NOTES/" class="next">NEXT</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC8yOTAwNS81NTc0"><script>(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');</script><noscript> Please activate JavaScript for write a comment in LiveRe</noscript>
+</div><div class="copyright"><p>© undefined - 2017 <a href="1l1.lol">Haolu</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/MikeCoder/hexo-theme-gandalfr" target="_blank">hexo-theme-gandalfr</a>.</p></div></footer></div><script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" crossorigin="anonymous"></script><script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js" crossorigin="anonymous"></script><script>$(document).ready(function() { $('pre').each(function(i, block) { hljs.highlightBlock(block); }); });</script></body></html>
