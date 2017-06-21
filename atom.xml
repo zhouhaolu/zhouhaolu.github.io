@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="1l1.lol/"/>
-  <updated>2017-06-21T18:29:07.902Z</updated>
+  <updated>2017-06-21T18:32:55.041Z</updated>
   <id>1l1.lol/</id>
   
   <author>
@@ -20,16 +20,20 @@
     <link href="1l1.lol/2017/06/23/2017-06-20%20NOTES/"/>
     <id>1l1.lol/2017/06/23/2017-06-20 NOTES/</id>
     <published>2017-06-23T04:38:26.000Z</published>
-    <updated>2017-06-21T18:29:07.902Z</updated>
+    <updated>2017-06-21T18:32:55.041Z</updated>
     
     <content type="html"><![CDATA[<h6>vim</h6>
 
+<blockquote>
 <p>vi编辑器是所有Unix及Linux系统下标准的编辑器，他就相当于windows系统中的记事本一样，它的强大不逊色于任何最新的文本编辑器。他是我们使用Linux系统不能缺少的工具。由于对Unix及linux系统的任何版本，vi编辑器是完全相同的，学会它后，您将在Linux的世界里畅行无阻。</p>
 <p>vim 具有程序编辑的能力，可以以字体颜色辨别语法的正确性，方便程序设计；</p>
+</blockquote>
 <p>因为程序简单，编辑速度相当快速。</p>
+<blockquote>
 <p>vim可以当作vi的升级版本，他可以用多种颜色的方式来显示一些特殊的信息。</p>
 <p>vim会依据文件扩展名或者是文件内的开头信息， 判断该文件的内容而自动的执行该程序的语法判断式，再以颜色来显示程序代码与一般信息。</p>
 <p>vim里面加入了很多额外的功能，例如支持正则表达式的搜索、多文件编辑、块复制等等。 这对于我们在Linux上进行一些配置文件的修改工作时是很棒的功能。</p>
+</blockquote>
 <a id="more"></a>
 <p>安装vim<br><code>yum install -y vim-enhanced</code></p>
 <p>一般模式、编辑模式、命令模式</p>
@@ -51,12 +55,16 @@
     
       &lt;h6&gt;vim&lt;/h6&gt;
 
+&lt;blockquote&gt;
 &lt;p&gt;vi编辑器是所有Unix及Linux系统下标准的编辑器，他就相当于windows系统中的记事本一样，它的强大不逊色于任何最新的文本编辑器。他是我们使用Linux系统不能缺少的工具。由于对Unix及linux系统的任何版本，vi编辑器是完全相同的，学会它后，您将在Linux的世界里畅行无阻。&lt;/p&gt;
 &lt;p&gt;vim 具有程序编辑的能力，可以以字体颜色辨别语法的正确性，方便程序设计；&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;因为程序简单，编辑速度相当快速。&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;vim可以当作vi的升级版本，他可以用多种颜色的方式来显示一些特殊的信息。&lt;/p&gt;
 &lt;p&gt;vim会依据文件扩展名或者是文件内的开头信息， 判断该文件的内容而自动的执行该程序的语法判断式，再以颜色来显示程序代码与一般信息。&lt;/p&gt;
 &lt;p&gt;vim里面加入了很多额外的功能，例如支持正则表达式的搜索、多文件编辑、块复制等等。 这对于我们在Linux上进行一些配置文件的修改工作时是很棒的功能。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -70,10 +78,11 @@
     <link href="1l1.lol/2017/06/21/2017-06-21%20NOTES/"/>
     <id>1l1.lol/2017/06/21/2017-06-21 NOTES/</id>
     <published>2017-06-21T04:38:26.000Z</published>
-    <updated>2017-06-21T18:29:08.002Z</updated>
+    <updated>2017-06-21T18:32:55.133Z</updated>
     
     <content type="html"><![CDATA[<h6>进入编辑模式</h6>
 
+<blockquote>
 <p>编辑模式可以对文本进行编辑</p>
 <p>I 在行首插入</p>
 <p>i在光标位置</p>
@@ -81,6 +90,7 @@
 <p>O光标所在的上面一行写入</p>
 <p>a光标所在的字符后写入</p>
 <p>A在行末开始写入</p>
+</blockquote>
 <a id="more"></a>
 <h6>vim命令模式</h6>
 
@@ -100,6 +110,7 @@
     
       &lt;h6&gt;进入编辑模式&lt;/h6&gt;
 
+&lt;blockquote&gt;
 &lt;p&gt;编辑模式可以对文本进行编辑&lt;/p&gt;
 &lt;p&gt;I 在行首插入&lt;/p&gt;
 &lt;p&gt;i在光标位置&lt;/p&gt;
@@ -107,6 +118,7 @@
 &lt;p&gt;O光标所在的上面一行写入&lt;/p&gt;
 &lt;p&gt;a光标所在的字符后写入&lt;/p&gt;
 &lt;p&gt;A在行末开始写入&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -120,9 +132,12 @@
     <link href="1l1.lol/2017/06/19/2017-06-19%20NOTES/"/>
     <id>1l1.lol/2017/06/19/2017-06-19 NOTES/</id>
     <published>2017-06-19T04:38:26.000Z</published>
-    <updated>2017-06-21T18:29:07.801Z</updated>
+    <updated>2017-06-21T18:32:54.895Z</updated>
     
-    <content type="html"><![CDATA[<p></p><h6>LVM</h6><br>LVM逻辑卷管理，是一种将一个或多个硬盘的分区在逻辑上集合，相当于一个大硬盘来使用，当硬盘的空间不够使用的时候，可以继续将其它的硬盘的 分区加入其中，这样可以事项一种磁盘空间的动态管理，相对于普通的磁盘分区有很大的灵活性，使用普通的磁盘分区，当一个磁盘的分区空间不够使用的时候，可 能就会带来很大的麻烦。使用LVM在一定程度上就可以解决普通磁盘分区带来的问题。<p></p>
+    <content type="html"><![CDATA[<p></p><h6>LVM</h6><p></p>
+<blockquote>
+<p>LVM逻辑卷管理，是一种将一个或多个硬盘的分区在逻辑上集合，相当于一个大硬盘来使用，当硬盘的空间不够使用的时候，可以继续将其它的硬盘的 分区加入其中，这样可以事项一种磁盘空间的动态管理，相对于普通的磁盘分区有很大的灵活性，使用普通的磁盘分区，当一个磁盘的分区空间不够使用的时候，可 能就会带来很大的麻烦。使用LVM在一定程度上就可以解决普通磁盘分区带来的问题。</p>
+</blockquote>
 <a id="more"></a>
 <p><img src="http://or87r09l5.bkt.clouddn.com/LVM.png" alt="image"><br>准备一个磁盘分区</p>
 <p><code>fdisk /dev/sdb</code></p>
@@ -161,7 +176,10 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;/p&gt;&lt;h6&gt;LVM&lt;/h6&gt;&lt;br&gt;LVM逻辑卷管理，是一种将一个或多个硬盘的分区在逻辑上集合，相当于一个大硬盘来使用，当硬盘的空间不够使用的时候，可以继续将其它的硬盘的 分区加入其中，这样可以事项一种磁盘空间的动态管理，相对于普通的磁盘分区有很大的灵活性，使用普通的磁盘分区，当一个磁盘的分区空间不够使用的时候，可 能就会带来很大的麻烦。使用LVM在一定程度上就可以解决普通磁盘分区带来的问题。&lt;p&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;/p&gt;&lt;h6&gt;LVM&lt;/h6&gt;&lt;p&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;LVM逻辑卷管理，是一种将一个或多个硬盘的分区在逻辑上集合，相当于一个大硬盘来使用，当硬盘的空间不够使用的时候，可以继续将其它的硬盘的 分区加入其中，这样可以事项一种磁盘空间的动态管理，相对于普通的磁盘分区有很大的灵活性，使用普通的磁盘分区，当一个磁盘的分区空间不够使用的时候，可 能就会带来很大的麻烦。使用LVM在一定程度上就可以解决普通磁盘分区带来的问题。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -175,7 +193,7 @@
     <link href="1l1.lol/2017/06/16/2017-06-16%20NOTES/"/>
     <id>1l1.lol/2017/06/16/2017-06-16 NOTES/</id>
     <published>2017-06-16T04:38:26.000Z</published>
-    <updated>2017-06-21T18:29:07.704Z</updated>
+    <updated>2017-06-21T18:32:54.804Z</updated>
     
     <content type="html"><![CDATA[<h6>linux支持的文件系统</h6><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[root@VM_135_225_centos ~]# cat /etc/filesystems</div><div class="line">ext4</div><div class="line">ext3</div><div class="line">ext2</div><div class="line">nodev proc</div><div class="line">nodev devpts</div><div class="line">iso9660</div><div class="line">vfat</div><div class="line">hfs</div><div class="line">hfsplus</div></pre></td></tr></table></figure><br><br><a id="more"></a><br><br><h6>linux系统格式</h6>
 
@@ -229,11 +247,13 @@
     <link href="1l1.lol/2017/06/15/2017-06-15%20NOTES/"/>
     <id>1l1.lol/2017/06/15/2017-06-15 NOTES/</id>
     <published>2017-06-15T04:38:26.000Z</published>
-    <updated>2017-06-21T18:29:07.604Z</updated>
+    <updated>2017-06-21T18:32:54.706Z</updated>
     
     <content type="html"><![CDATA[<h6>df命令</h6>
 
+<blockquote>
 <p>df命令用于显示磁盘分区上的可使用的磁盘空间。默认显示单位为KB。可以利用该命令来获取硬盘被占用了多少空间，目前还剩下多少空间等信息。</p>
+</blockquote>
 <a id="more"></a>
 <p><code>df</code>查看系统磁盘设备，默认是KB为单位：</p>
 <table>
@@ -313,7 +333,9 @@
     
       &lt;h6&gt;df命令&lt;/h6&gt;
 
+&lt;blockquote&gt;
 &lt;p&gt;df命令用于显示磁盘分区上的可使用的磁盘空间。默认显示单位为KB。可以利用该命令来获取硬盘被占用了多少空间，目前还剩下多少空间等信息。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
