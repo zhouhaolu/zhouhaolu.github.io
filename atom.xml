@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="1l1.lol/"/>
-  <updated>2017-06-21T18:32:55.041Z</updated>
+  <updated>2017-06-21T18:34:46.466Z</updated>
   <id>1l1.lol/</id>
   
   <author>
@@ -20,16 +20,14 @@
     <link href="1l1.lol/2017/06/23/2017-06-20%20NOTES/"/>
     <id>1l1.lol/2017/06/23/2017-06-20 NOTES/</id>
     <published>2017-06-23T04:38:26.000Z</published>
-    <updated>2017-06-21T18:32:55.041Z</updated>
+    <updated>2017-06-21T18:34:46.466Z</updated>
     
     <content type="html"><![CDATA[<h6>vim</h6>
 
 <blockquote>
 <p>vi编辑器是所有Unix及Linux系统下标准的编辑器，他就相当于windows系统中的记事本一样，它的强大不逊色于任何最新的文本编辑器。他是我们使用Linux系统不能缺少的工具。由于对Unix及linux系统的任何版本，vi编辑器是完全相同的，学会它后，您将在Linux的世界里畅行无阻。</p>
 <p>vim 具有程序编辑的能力，可以以字体颜色辨别语法的正确性，方便程序设计；</p>
-</blockquote>
 <p>因为程序简单，编辑速度相当快速。</p>
-<blockquote>
 <p>vim可以当作vi的升级版本，他可以用多种颜色的方式来显示一些特殊的信息。</p>
 <p>vim会依据文件扩展名或者是文件内的开头信息， 判断该文件的内容而自动的执行该程序的语法判断式，再以颜色来显示程序代码与一般信息。</p>
 <p>vim里面加入了很多额外的功能，例如支持正则表达式的搜索、多文件编辑、块复制等等。 这对于我们在Linux上进行一些配置文件的修改工作时是很棒的功能。</p>
@@ -58,9 +56,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;vi编辑器是所有Unix及Linux系统下标准的编辑器，他就相当于windows系统中的记事本一样，它的强大不逊色于任何最新的文本编辑器。他是我们使用Linux系统不能缺少的工具。由于对Unix及linux系统的任何版本，vi编辑器是完全相同的，学会它后，您将在Linux的世界里畅行无阻。&lt;/p&gt;
 &lt;p&gt;vim 具有程序编辑的能力，可以以字体颜色辨别语法的正确性，方便程序设计；&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;p&gt;因为程序简单，编辑速度相当快速。&lt;/p&gt;
-&lt;blockquote&gt;
 &lt;p&gt;vim可以当作vi的升级版本，他可以用多种颜色的方式来显示一些特殊的信息。&lt;/p&gt;
 &lt;p&gt;vim会依据文件扩展名或者是文件内的开头信息， 判断该文件的内容而自动的执行该程序的语法判断式，再以颜色来显示程序代码与一般信息。&lt;/p&gt;
 &lt;p&gt;vim里面加入了很多额外的功能，例如支持正则表达式的搜索、多文件编辑、块复制等等。 这对于我们在Linux上进行一些配置文件的修改工作时是很棒的功能。&lt;/p&gt;
