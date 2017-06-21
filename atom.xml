@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="1l1.lol/"/>
-  <updated>2017-06-21T17:18:47.527Z</updated>
+  <updated>2017-06-21T18:23:10.589Z</updated>
   <id>1l1.lol/</id>
   
   <author>
@@ -14,6 +14,104 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2017-06-20 NOTES</title>
+    <link href="1l1.lol/2017/06/23/2017-06-20%20NOTES/"/>
+    <id>1l1.lol/2017/06/23/2017-06-20 NOTES/</id>
+    <published>2017-06-23T04:38:26.000Z</published>
+    <updated>2017-06-21T18:23:10.589Z</updated>
+    
+    <content type="html"><![CDATA[<h6>vim</h6>
+
+<p>vi编辑器是所有Unix及Linux系统下标准的编辑器，他就相当于windows系统中的记事本一样，它的强大不逊色于任何最新的文本编辑器。他是我们使用Linux系统不能缺少的工具。由于对Unix及linux系统的任何版本，vi编辑器是完全相同的，学会它后，您将在Linux的世界里畅行无阻。</p>
+<p>vim 具有程序编辑的能力，可以以字体颜色辨别语法的正确性，方便程序设计；</p>
+<p>因为程序简单，编辑速度相当快速。</p>
+<p>vim可以当作vi的升级版本，他可以用多种颜色的方式来显示一些特殊的信息。</p>
+<p>vim会依据文件扩展名或者是文件内的开头信息， 判断该文件的内容而自动的执行该程序的语法判断式，再以颜色来显示程序代码与一般信息。</p>
+<p>vim里面加入了很多额外的功能，例如支持正则表达式的搜索、多文件编辑、块复制等等。 这对于我们在Linux上进行一些配置文件的修改工作时是很棒的功能。</p>
+<p>安装vim<br><code>yum install -y vim-enhanced</code></p>
+<p>一般模式、编辑模式、命令模式</p>
+<p>一般模式：复制、删除</p>
+<p>编辑模式：修改、复制、删除</p>
+<h6>vim一般模式下移动光标</h6>
+
+<p>翻屏向上 ctrl+b   pageup</p>
+<p>翻屏向下 ctrl+f   pagedown</p>
+<p>光标快速到行首 shift+0、shift+6</p>
+<p>光标快速到行末 shift+6</p>
+<p>快速到文章首行 gg</p>
+<p>快速到文章尾行 shift+g</p>
+<p>nG到指定行 n是数字</p>
+<p></p><h6>vim一般模式下复制、剪切和粘贴</h6><br><img src="http://or87r09l5.bkt.clouddn.com/vim2.png" alt="image"><p></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6&gt;vim&lt;/h6&gt;
+
+&lt;p&gt;vi编辑器是所有Unix及Linux系统下标准的编辑器，他就相当于windows系统中的记事本一样，它的强大不逊色于任何最新的文本编辑器。他是我们使用Linux系统不能缺少的工具。由于对Unix及linux系统的任何版本，vi编辑器是完全相同的，
+    
+    </summary>
+    
+    
+      <category term="vim" scheme="1l1.lol/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2017-06-19 NOTES</title>
+    <link href="1l1.lol/2017/06/19/2017-06-19%20NOTES/"/>
+    <id>1l1.lol/2017/06/19/2017-06-19 NOTES/</id>
+    <published>2017-06-19T04:38:26.000Z</published>
+    <updated>2017-06-21T18:14:59.723Z</updated>
+    
+    <content type="html"><![CDATA[<p></p><h6>LVM</h6><br>LVM逻辑卷管理，是一种将一个或多个硬盘的分区在逻辑上集合，相当于一个大硬盘来使用，当硬盘的空间不够使用的时候，可以继续将其它的硬盘的 分区加入其中，这样可以事项一种磁盘空间的动态管理，相对于普通的磁盘分区有很大的灵活性，使用普通的磁盘分区，当一个磁盘的分区空间不够使用的时候，可 能就会带来很大的麻烦。使用LVM在一定程度上就可以解决普通磁盘分区带来的问题。<p></p>
+<p><img src="http://or87r09l5.bkt.clouddn.com/LVM.png" alt="image"><br>准备一个磁盘分区</p>
+<p><code>fdisk /dev/sdb</code></p>
+<p>n 创建三个分区 分别5G</p>
+<p>t改变分区类型为8e</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">[][[]root[]@Enn []~[]]$ fdisk /dev/sdc</div><div class="line"> </div><div class="line">WARNING: DOS-compatible mode is deprecated. It&apos;s strongly recommended to</div><div class="line">         switch off the mode (command &apos;c&apos;) and change display units to</div><div class="line">         sectors (command &apos;u&apos;).</div><div class="line"> </div><div class="line">Command (m for help): n</div><div class="line">Command action</div><div class="line">   e   extended</div><div class="line">   p   primary partition (1-4)</div><div class="line">p</div><div class="line">Partition number (1-4): 1</div><div class="line">First cylinder (1-2610, default 1): </div><div class="line">Using default value 1</div><div class="line">Last cylinder, +cylinders or +size&#123;K,M,G&#125; (1-2610, default 2610): +5G</div><div class="line"> </div><div class="line">Command (m for help): n</div><div class="line">Command action</div><div class="line">   e   extended</div><div class="line">   p   primary partition (1-4)</div><div class="line">p</div><div class="line">Partition number (1-4): 2</div><div class="line">First cylinder (655-2610, default 655): </div><div class="line">Using default value 655</div><div class="line">Last cylinder, +cylinders or +size&#123;K,M,G&#125; (655-2610, default 2610): +5G</div><div class="line"> </div><div class="line">Command (m for help): n</div><div class="line">Command action</div><div class="line">   e   extended</div><div class="line">   p   primary partition (1-4)</div><div class="line">p</div><div class="line">Partition number (1-4): 3</div><div class="line">First cylinder (1309-2610, default 1309): </div><div class="line">Using default value 1309</div><div class="line">Last cylinder, +cylinders or +size&#123;K,M,G&#125; (1309-2610, default 2610): +5G</div><div class="line"> </div><div class="line">Command (m for help): p</div><div class="line"> </div><div class="line">Disk /dev/sdc: 21.5 GB, 21474836480 bytes</div><div class="line">255 heads, 63 sectors/track, 2610 cylinders</div><div class="line">Units = cylinders of 16065 * 512 = 8225280 bytes</div><div class="line">Sector size (logical/physical): 512 bytes / 512 bytes</div><div class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</div><div class="line">Disk identifier: 0x7c8e82b1</div><div class="line"> </div><div class="line">   Device Boot      Start         End      Blocks   Id  System</div><div class="line">/dev/sdc1               1         654     5253223+  83  Linux</div><div class="line">/dev/sdc2             655        1308     5253255   83  Linux</div><div class="line">/dev/sdc3            1309        1962     5253255   83  Linux</div><div class="line"> </div><div class="line">Command (m for help): t</div><div class="line">Partition number (1-4): 1</div><div class="line">Hex code (type L to list codes): 8e            # 修改分区类型为8e，即Linux LVM类型</div><div class="line">Changed system type of partition 1 to 8e (Linux LVM)</div><div class="line"> </div><div class="line">Command (m for help): t</div><div class="line">Partition number (1-4): 2</div><div class="line">Hex code (type L to list codes): 8e</div><div class="line">Changed system type of partition 2 to 8e (Linux LVM)</div><div class="line"> </div><div class="line">Command (m for help): t</div><div class="line">Partition number (1-4): 3</div><div class="line">Hex code (type L to list codes): 8e</div><div class="line">Changed system type of partition 3 to 8e (Linux LVM)</div><div class="line"> </div><div class="line">Command (m for help): p</div><div class="line"> </div><div class="line">Disk /dev/sdc: 21.5 GB, 21474836480 bytes</div><div class="line">255 heads, 63 sectors/track, 2610 cylinders</div><div class="line">Units = cylinders of 16065 * 512 = 8225280 bytes</div><div class="line">Sector size (logical/physical): 512 bytes / 512 bytes</div><div class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</div><div class="line">Disk identifier: 0x7c8e82b1</div><div class="line"> </div><div class="line">   Device Boot      Start         End      Blocks   Id  System</div><div class="line">/dev/sdc1               1         654     5253223+  8e  Linux LVM</div><div class="line">/dev/sdc2             655        1308     5253255   8e  Linux LVM</div><div class="line">/dev/sdc3            1309        1962     5253255   8e  Linux LVM</div><div class="line"> </div><div class="line">Command (m for help): w</div><div class="line">The partition table has been altered!</div><div class="line"> </div><div class="line">Calling ioctl() to re-read partition table.</div><div class="line">Syncing disks.</div></pre></td></tr></table></figure>
+<h6>创建物理卷</h6>
+
+<p>pvcreate /dev/sbd1</p>
+<p>pvcreate /dev/sbd2</p>
+<p>pvcreate /dev/sbd2</p>
+<p>pvdisplay 列出当年物理卷</p>
+<p>pvremove /dev/sdb3 删除物理卷</p>
+<p>安装LVM</p>
+<p><code>yum install -y lvm</code></p>
+<p>搜索安装包</p>
+<p><code>yum provides &quot;/&quot;*/pvcreate&quot;</code></p>
+<h6>创建卷组</h6>
+
+<p>pvs 查看</p>
+<p><code>vgcreate vg1 /dev sdb1 /dev/sdb2</code>  创建卷组</p>
+<p><code>vgs</code> 查看卷组</p>
+<h6>创建逻辑卷</h6>
+
+<p><code>lvcreate -L 100M -n lv1 vg1</code>  创建一个100M的 名字为lv1 从vg1组里面划分出来</p>
+<p>格式化</p>
+<p><code>mkds.ext4 /dev、vg1/lv1</code> 格式化成EXT4文件格式</p>
+<p><code>mount /dev/vg1/lv1 /mnt/</code> 将/vg1/lv1挂载到mnt下</p>
+<h6>宽容逻辑卷</h6>
+
+<p><code>resize -L 300M /dev/vg1/lv1</code>重新设置卷大小</p>
+<p><code>e2size2fs -f /dev/vg1/lv1</code> 检查洗盘错误</p>
+<p><code>resize2fs /dev/vg/1v1</code> 更新逻辑卷信息（ext4执行）</p>
+<p><code>xfs_growfs /dev/vg1/lv1</code> xfd文件系统需要执行</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;/p&gt;&lt;h6&gt;LVM&lt;/h6&gt;&lt;br&gt;LVM逻辑卷管理，是一种将一个或多个硬盘的分区在逻辑上集合，相当于一个大硬盘来使用，当硬盘的空间不够使用的时候，可以继续将其它的硬盘的 分区加入其中，这样可以事项一种磁盘空间的动态管理，相对于普通的磁盘分区有很大的灵活性，使用普通的磁
+    
+    </summary>
+    
+    
+      <category term="LVM" scheme="1l1.lol/tags/LVM/"/>
+    
+  </entry>
   
   <entry>
     <title>2017-06-16 NOTS</title>
