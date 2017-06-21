@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="1l1.lol/"/>
-  <updated>2017-06-15T15:23:45.190Z</updated>
+  <updated>2017-06-21T17:18:47.527Z</updated>
   <id>1l1.lol/</id>
   
   <author>
@@ -14,6 +14,166 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2017-06-16 NOTS</title>
+    <link href="1l1.lol/2017/06/16/2017-06-16%20NOTES/"/>
+    <id>1l1.lol/2017/06/16/2017-06-16 NOTES/</id>
+    <published>2017-06-16T04:38:26.000Z</published>
+    <updated>2017-06-21T17:18:47.527Z</updated>
+    
+    <content type="html"><![CDATA[<h6>linux支持的文件系统</h6><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[root@VM_135_225_centos ~]# cat /etc/filesystems</div><div class="line">ext4</div><div class="line">ext3</div><div class="line">ext2</div><div class="line">nodev proc</div><div class="line">nodev devpts</div><div class="line">iso9660</div><div class="line">vfat</div><div class="line">hfs</div><div class="line">hfsplus</div></pre></td></tr></table></figure><br><br><h6>linux系统格式</h6>
+
+<p>老版本ext Centos5=ext3 Centos6=ext4 Centos 7=xfs</p>
+<h6>格式化磁盘</h6>
+
+<p><code>mkfs.ext4 =mke2fs -t</code></p>
+<p>-b 块大小</p>
+<p>-t 分区格式</p>
+<p>-m 预留空间</p>
+<p>-i 多少字节一个inodes</p>
+<h6>磁盘挂载</h6>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mount</div><div class="line">mount /dev/sdb /mnt/</div></pre></td></tr></table></figure>
+<p>卸载命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">umount</div><div class="line">mount /dev/sdb /mnt/</div></pre></td></tr></table></figure></p>
+<h6>手动添加swap分区</h6>
+
+<p>创建虚拟磁盘文件</p>
+<p>dd：用指定大小的块拷贝一个文件，并在拷贝的同时进行指定的转换。</p>
+<p>/dev/zero 就是一个特殊设备，里面有源源不断的 0</p>
+<p>if指定源设备</p>
+<p>of指定目标设备（在这里，我们创建了一个文件，作为一个模拟的设备）</p>
+<p> <code>dd if=/dev/zero of=/tmp/newdisk bs=1M count=100</code></p>
+<p> 格式化磁盘文件</p>
+<p> <code>mkswap</code></p>
+<p>挂载swap</p>
+<p><code>swapon /tmp/newdisk</code></p>
+<p>卸载swap</p>
+<p><code>swapoff /tmp/newdisk</code></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6&gt;linux支持的文件系统&lt;/h6&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/di
+    
+    </summary>
+    
+    
+      <category term="磁盘分区" scheme="1l1.lol/tags/%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/"/>
+    
+      <category term="磁盘格式化" scheme="1l1.lol/tags/%E7%A3%81%E7%9B%98%E6%A0%BC%E5%BC%8F%E5%8C%96/"/>
+    
+      <category term="磁盘挂载" scheme="1l1.lol/tags/%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/"/>
+    
+      <category term="手动增加swap空间" scheme="1l1.lol/tags/%E6%89%8B%E5%8A%A8%E5%A2%9E%E5%8A%A0swap%E7%A9%BA%E9%97%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2017-06-15 NOTS</title>
+    <link href="1l1.lol/2017/06/15/2017-06-15%20NOTES/"/>
+    <id>1l1.lol/2017/06/15/2017-06-15 NOTES/</id>
+    <published>2017-06-15T04:38:26.000Z</published>
+    <updated>2017-06-21T16:53:37.791Z</updated>
+    
+    <content type="html"><![CDATA[<h6>df命令</h6>
+
+<p>df命令用于显示磁盘分区上的可使用的磁盘空间。默认显示单位为KB。可以利用该命令来获取硬盘被占用了多少空间，目前还剩下多少空间等信息。</p>
+<p><code>df</code>查看系统磁盘设备，默认是KB为单位：</p>
+<table>
+<thead>
+<tr>
+<th>文件系统</th>
+<th>1k-块</th>
+<th>已用</th>
+<th>可用</th>
+<th>已用%</th>
+<th>挂载点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/dev/sda2</td>
+<td>146294492</td>
+<td>28244432</td>
+<td>110498708</td>
+<td>21%</td>
+<td>/</td>
+</tr>
+</tbody>
+</table>
+<p><code>df -h</code>以KB以上的单位来显示，可读性高：</p>
+<table>
+<thead>
+<tr>
+<th>文件系统</th>
+<th>容量</th>
+<th>已用</th>
+<th>可用</th>
+<th>已用%</th>
+<th>挂载点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/dev/sda2</td>
+<td>140G</td>
+<td>27G</td>
+<td>106G</td>
+<td>21%</td>
+<td>/</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>加了-h后会根据磁盘大小适当的显示它的单位</li>
+<li><code>df -h</code>以可读性较高的方式来显示信息</li>
+</ul>
+<p><code>df -m</code>指定区块大小为1048576字节</p>
+<p><code>df -i</code>显示inode的信息</p>
+<ul>
+<li>inode是在磁盘格式化时候事先分配好的 与磁盘空间大小有关系</li>
+</ul>
+<p>磁盘可用单位</p>
+<ul>
+<li>Byte -KB-MB-GB-TB-PB</li>
+</ul>
+<p><code>free</code>查看swap分区大小</p>
+<h6>du命令</h6>
+
+<p>du命令也是查看使用空间的，但是与df命令不同的是Linux du命令是对文件和目录磁盘使用的空间的查看，还是和df命令有一些区别的。</p>
+<p> <code>du</code>显示目录或者文件所占空间：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">[root@localhost test]# du </div><div class="line">608 ./test6 </div><div class="line">308 ./test4 </div><div class="line">4 ./scf/lib </div><div class="line">4 ./scf/service/deploy/product </div><div class="line">4 ./scf/service/deploy/info </div><div class="line">12 ./scf/service/deploy </div><div class="line">16 ./scf/service</div><div class="line">4 ./scf/doc </div><div class="line">4 ./scf/bin </div><div class="line">32 ./scf </div><div class="line">8 ./test3 </div><div class="line">1288 .</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">du -s</div><div class="line">[root@localhost test]# du -s /root</div><div class="line">92K   /root</div></pre></td></tr></table></figure>
+<p></p><h6>磁盘分区</h6><p></p>
+<p>fdisk命令</p>
+<p>fdisk命令用于观察硬盘实体使用情况，也可对硬盘分区。它采用传统的问答式界面，而非类似DOS fdisk的cfdisk互动式操作界面，因此在使用上较为不便，但功能却丝毫不打折扣。 </p>
+<p>-b&lt;分区大小&gt;：指定每个分区的大小；</p>
+<p>-l：列出指定的外围设备的分区表状况；</p>
+<p>-s&lt;分区编号&gt;：将指定的分区大小输出到标准输出上，单位为区块；</p>
+<p>-u：搭配”-l”参数列表，会用分区数目取代柱面数目，来表示每个分区的起始地址； </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6&gt;df命令&lt;/h6&gt;
+
+&lt;p&gt;df命令用于显示磁盘分区上的可使用的磁盘空间。默认显示单位为KB。可以利用该命令来获取硬盘被占用了多少空间，目前还剩下多少空间等信息。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;df&lt;/code&gt;查看系统磁盘设备，默认是KB为单位：&lt;/p&gt;
+&lt;table&gt;
+&lt;
+    
+    </summary>
+    
+    
+      <category term="df" scheme="1l1.lol/tags/df/"/>
+    
+      <category term="du" scheme="1l1.lol/tags/du/"/>
+    
+      <category term="fdisk" scheme="1l1.lol/tags/fdisk/"/>
+    
+      <category term="磁盘分区" scheme="1l1.lol/tags/%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>2017-06-14 NOTES</title>

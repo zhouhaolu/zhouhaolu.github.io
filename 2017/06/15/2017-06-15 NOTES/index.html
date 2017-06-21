@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>2017-06-15 NOTS · H.Lの自习室</title><meta name="description" content="2017-06-15 NOTS - Haolu"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-light.css"><link rel="search" type="application/opensearchdescription+xml" href="1l1.lol/atom.xml" title="H.Lの自习室"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="http://oqlwx55ng.bkt.clouddn.com/icon-tech.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BOLG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/zhouhaolu" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">2017-06-15 NOTS</h1><div class="tags"><a href="/tags/df/" class="tag-title">#df</a><a href="/tags/du/" class="tag-title">#du</a><a href="/tags/fdisk/" class="tag-title">#fdisk</a><a href="/tags/磁盘分区/" class="tag-title">#磁盘分区</a></div><div class="post-info">Jun 15, 2017</div><div class="post-content"><h6>df命令</h6>
+
+<p>df命令用于显示磁盘分区上的可使用的磁盘空间。默认显示单位为KB。可以利用该命令来获取硬盘被占用了多少空间，目前还剩下多少空间等信息。</p>
+<p><code>df</code>查看系统磁盘设备，默认是KB为单位：</p>
+<table>
+<thead>
+<tr>
+<th>文件系统</th>
+<th>1k-块</th>
+<th>已用</th>
+<th>可用</th>
+<th>已用%</th>
+<th>挂载点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/dev/sda2</td>
+<td>146294492</td>
+<td>28244432</td>
+<td>110498708</td>
+<td>21%</td>
+<td>/</td>
+</tr>
+</tbody>
+</table>
+<p><code>df -h</code>以KB以上的单位来显示，可读性高：</p>
+<table>
+<thead>
+<tr>
+<th>文件系统</th>
+<th>容量</th>
+<th>已用</th>
+<th>可用</th>
+<th>已用%</th>
+<th>挂载点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/dev/sda2</td>
+<td>140G</td>
+<td>27G</td>
+<td>106G</td>
+<td>21%</td>
+<td>/</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>加了-h后会根据磁盘大小适当的显示它的单位</li>
+<li><code>df -h</code>以可读性较高的方式来显示信息</li>
+</ul>
+<p><code>df -m</code>指定区块大小为1048576字节</p>
+<p><code>df -i</code>显示inode的信息</p>
+<ul>
+<li>inode是在磁盘格式化时候事先分配好的 与磁盘空间大小有关系</li>
+</ul>
+<p>磁盘可用单位</p>
+<ul>
+<li>Byte -KB-MB-GB-TB-PB</li>
+</ul>
+<p><code>free</code>查看swap分区大小</p>
+<h6>du命令</h6>
+
+<p>du命令也是查看使用空间的，但是与df命令不同的是Linux du命令是对文件和目录磁盘使用的空间的查看，还是和df命令有一些区别的。</p>
+<p> <code>du</code>显示目录或者文件所占空间：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">[root@localhost test]# du </div><div class="line">608 ./test6 </div><div class="line">308 ./test4 </div><div class="line">4 ./scf/lib </div><div class="line">4 ./scf/service/deploy/product </div><div class="line">4 ./scf/service/deploy/info </div><div class="line">12 ./scf/service/deploy </div><div class="line">16 ./scf/service</div><div class="line">4 ./scf/doc </div><div class="line">4 ./scf/bin </div><div class="line">32 ./scf </div><div class="line">8 ./test3 </div><div class="line">1288 .</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">du -s</div><div class="line">[root@localhost test]# du -s /root</div><div class="line">92K   /root</div></pre></td></tr></table></figure>
+<p></p><h6>磁盘分区</h6><p></p>
+<p>fdisk命令</p>
+<p>fdisk命令用于观察硬盘实体使用情况，也可对硬盘分区。它采用传统的问答式界面，而非类似DOS fdisk的cfdisk互动式操作界面，因此在使用上较为不便，但功能却丝毫不打折扣。 </p>
+<p>-b&lt;分区大小&gt;：指定每个分区的大小；</p>
+<p>-l：列出指定的外围设备的分区表状况；</p>
+<p>-s&lt;分区编号&gt;：将指定的分区大小输出到标准输出上，单位为区块；</p>
+<p>-u：搭配”-l”参数列表，会用分区数目取代柱面数目，来表示每个分区的起始地址； </p>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/06/16/2017-06-16 NOTES/" class="prev">PREV</a><a href="/2017/06/14/2017-06-14 NOTES/" class="next">NEXT</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC8yOTAwNS81NTc0"><script>(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');</script><noscript> Please activate JavaScript for write a comment in LiveRe</noscript>
+</div><div class="copyright"><p>© undefined - 2017 <a href="1l1.lol">Haolu</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/MikeCoder/hexo-theme-gandalfr" target="_blank">hexo-theme-gandalfr</a>.</p></div></footer></div><script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" crossorigin="anonymous"></script><script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js" crossorigin="anonymous"></script><script>$(document).ready(function() { $('pre').each(function(i, block) { hljs.highlightBlock(block); }); });</script></body></html>

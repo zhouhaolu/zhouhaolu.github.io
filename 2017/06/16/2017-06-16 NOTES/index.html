@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>2017-06-16 NOTS · H.Lの自习室</title><meta name="description" content="2017-06-16 NOTS - Haolu"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-light.css"><link rel="search" type="application/opensearchdescription+xml" href="1l1.lol/atom.xml" title="H.Lの自习室"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="http://oqlwx55ng.bkt.clouddn.com/icon-tech.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BOLG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/zhouhaolu" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">2017-06-16 NOTS</h1><div class="tags"><a href="/tags/磁盘分区/" class="tag-title">#磁盘分区</a><a href="/tags/磁盘格式化/" class="tag-title">#磁盘格式化</a><a href="/tags/磁盘挂载/" class="tag-title">#磁盘挂载</a><a href="/tags/手动增加swap空间/" class="tag-title">#手动增加swap空间</a></div><div class="post-info">Jun 16, 2017</div><div class="post-content"><h6>linux支持的文件系统</h6><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[root@VM_135_225_centos ~]# cat /etc/filesystems</div><div class="line">ext4</div><div class="line">ext3</div><div class="line">ext2</div><div class="line">nodev proc</div><div class="line">nodev devpts</div><div class="line">iso9660</div><div class="line">vfat</div><div class="line">hfs</div><div class="line">hfsplus</div></pre></td></tr></table></figure><br><br><h6>linux系统格式</h6>
+
+<p>老版本ext Centos5=ext3 Centos6=ext4 Centos 7=xfs</p>
+<h6>格式化磁盘</h6>
+
+<p><code>mkfs.ext4 =mke2fs -t</code></p>
+<p>-b 块大小</p>
+<p>-t 分区格式</p>
+<p>-m 预留空间</p>
+<p>-i 多少字节一个inodes</p>
+<h6>磁盘挂载</h6>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mount</div><div class="line">mount /dev/sdb /mnt/</div></pre></td></tr></table></figure>
+<p>卸载命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">umount</div><div class="line">mount /dev/sdb /mnt/</div></pre></td></tr></table></figure></p>
+<h6>手动添加swap分区</h6>
+
+<p>创建虚拟磁盘文件</p>
+<p>dd：用指定大小的块拷贝一个文件，并在拷贝的同时进行指定的转换。</p>
+<p>/dev/zero 就是一个特殊设备，里面有源源不断的 0</p>
+<p>if指定源设备</p>
+<p>of指定目标设备（在这里，我们创建了一个文件，作为一个模拟的设备）</p>
+<p> <code>dd if=/dev/zero of=/tmp/newdisk bs=1M count=100</code></p>
+<p> 格式化磁盘文件</p>
+<p> <code>mkswap</code></p>
+<p>挂载swap</p>
+<p><code>swapon /tmp/newdisk</code></p>
+<p>卸载swap</p>
+<p><code>swapoff /tmp/newdisk</code></p>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/06/15/2017-06-15 NOTES/" class="next">NEXT</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC8yOTAwNS81NTc0"><script>(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');</script><noscript> Please activate JavaScript for write a comment in LiveRe</noscript>
+</div><div class="copyright"><p>© undefined - 2017 <a href="1l1.lol">Haolu</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/MikeCoder/hexo-theme-gandalfr" target="_blank">hexo-theme-gandalfr</a>.</p></div></footer></div><script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" crossorigin="anonymous"></script><script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js" crossorigin="anonymous"></script><script>$(document).ready(function() { $('pre').each(function(i, block) { hljs.highlightBlock(block); }); });</script></body></html>
