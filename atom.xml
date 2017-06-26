@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="1l1.lol/"/>
-  <updated>2017-06-26T16:52:37.746Z</updated>
+  <updated>2017-06-26T17:41:52.606Z</updated>
   <id>1l1.lol/</id>
   
   <author>
@@ -14,6 +14,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2017-06-23 NOTES</title>
+    <link href="1l1.lol/2017/06/23/2017-06-23%20NOTES/"/>
+    <id>1l1.lol/2017/06/23/2017-06-23 NOTES/</id>
+    <published>2017-06-23T04:38:26.000Z</published>
+    <updated>2017-06-26T17:41:52.606Z</updated>
+    
+    <content type="html"><![CDATA[<h6>zip压缩工具</h6>
+
+<p><code>yum install -y zip</code>（安装zip压缩）</p>
+<p><code>yum install -y unzip</code>（安装解压缩）</p>
+<p><code>zip 1.txt.zip 1.tx</code> （压缩文件）</p>
+<p><code>zip -r 1.zip  2.txt file</code> （压缩文件+目录）（zip压缩文件文件后源文件不删除）</p>
+<p>unzip 压缩文件名称 （解压缩到当前目录下）</p>
+<p><code>unzip 1.txt.zip -d test/</code>（解压1.txt到test目录）</p>
+<div class="tip"><br><br>不能查看文件内容<br><br>文件压缩后不删除源文件<br><br></div>
+
+<h6>tar打包工具</h6>
+
+<p><code>tar -cvf txt.tar test/</code> （打包test下的所有文件名称为txt.tar）</p>
+<p><code>tar xvf txt.tar</code>(解包)</p>
+<p><code>tar -tftxt.tar</code>（查看打包内容）</p>
+<p><code>tar -cvf test.tar --exclude 1.xt 2.txt test1</code> (打包并过滤1.txt、2.txt、test1文件)</p>
+<h6>tar打包并压缩</h6>
+
+<p><code>tar -czvf test.tar.gz test1</code> （gzip 打包压缩）</p>
+<p><code>tar -cjvf test.tar.bz2 test1</code> （bz2 打包压缩）</p>
+<p><code>tar -cJvf test.tar.xz test1</code> （xz 打包压缩）</p>
+<p> 解压缩时将<code>c</code>换成<code>x</code></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6&gt;zip压缩工具&lt;/h6&gt;
+
+&lt;p&gt;&lt;code&gt;yum install -y zip&lt;/code&gt;（安装zip压缩）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;yum install -y unzip&lt;/code&gt;（安装解压缩）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;zip 1.txt.zip 1.t
+    
+    </summary>
+    
+    
+      <category term="zip" scheme="1l1.lol/tags/zip/"/>
+    
+      <category term="tar" scheme="1l1.lol/tags/tar/"/>
+    
+      <category term="打包并压缩" scheme="1l1.lol/tags/%E6%89%93%E5%8C%85%E5%B9%B6%E5%8E%8B%E7%BC%A9/"/>
+    
+  </entry>
   
   <entry>
     <title>2017-06-22 NOTES</title>
