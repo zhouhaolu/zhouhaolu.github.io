@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>2017-06-22 NOTES · H.Lの自习室</title><meta name="description" content="2017-06-22 NOTES - Haolu"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-light.css"><link rel="search" type="application/opensearchdescription+xml" href="1l1.lol/atom.xml" title="H.Lの自习室"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="http://oqlwx55ng.bkt.clouddn.com/icon-tech.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BOLG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/zhouhaolu" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">2017-06-22 NOTES</h1><div class="tags"><a href="/tags/gzip/" class="tag-title">#gzip</a><a href="/tags/bzip/" class="tag-title">#bzip</a><a href="/tags/xz/" class="tag-title">#xz</a></div><div class="post-info">Jun 22, 2017</div><div class="post-content"><h6>常见压缩文件</h6>
+
+<blockquote>
+<ul>
+<li>Windows .rar .zip .7z</li>
+<li>Linux .zip .gz .bz2 .tar.gz .tar.bz2 .tar.xz</li>
+</ul>
+</blockquote>
+<a id="more"></a>
+<h6>gzip压缩工具</h6>
+
+<p>gzip 文件名称   （压缩文件）</p>
+<p>gzip -1  -9  （压缩等级,默认为6级别）</p>
+<p>gzip -d 文件名称  （解压缩）</p>
+<p>gzip -c 文件名称</p>
+<ul>
+<li><p>gzip -c 1.txt &gt; /tmp/1.txt.gz (压缩的时候指定到一个文件路径并且源文件不消失)</p>
+</li>
+<li><p>gzip -d -c 1.txt /tmp///1.txt.gz &gt; /tmp /1/2.txt (解压缩到指定文件夹且源文件不消失)</p>
+</li>
+</ul>
+<p>file 压缩文件名称 （查看压缩文件信息）</p>
+<p>zcat 压缩文件名称 （查看压缩文件内容）</p>
+<div class="tip"><br><br>gzip 不能压缩目录<br><br></div>
+
+<h6>bzip2压缩工具</h6>
+
+<p><code>yum install -y bzip2</code> （安装bzip2）</p>
+<p>bzip2 文件名称  （压缩文件）（相比gzip 压缩更狠）</p>
+<p>bzip2 -d 文件名称 （解压文件）</p>
+<p>bzcat 压缩文件名称 （查看压缩文件内容）</p>
+<div class="tip"><br><br>bzip2 不能压缩目录<br><br></div>
+
+<h6>xz压缩工具</h6>
+
+<p>xz 文件名称 （压缩文件）（比bzip2压缩更狠）</p>
+<p>xz -d 文件名称 （解压缩）</p>
+<p>unxz 文件名称 （解压缩）</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/06/21/2017-06-21 NOTES/" class="next">NEXT</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC8yOTAwNS81NTc0"><script>(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');</script><noscript> Please activate JavaScript for write a comment in LiveRe</noscript>
+</div><div class="copyright"><p>© undefined - 2017 <a href="1l1.lol">Haolu</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/MikeCoder/hexo-theme-gandalfr" target="_blank">hexo-theme-gandalfr</a>.</p></div></footer></div><script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" crossorigin="anonymous"></script><script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js" crossorigin="anonymous"></script><script>$(document).ready(function() { $('pre').each(function(i, block) { hljs.highlightBlock(block); }); });</script></body></html>

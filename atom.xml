@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="1l1.lol/"/>
-  <updated>2017-06-21T18:32:55.133Z</updated>
+  <updated>2017-06-26T16:52:37.746Z</updated>
   <id>1l1.lol/</id>
   
   <author>
@@ -14,6 +14,75 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2017-06-22 NOTES</title>
+    <link href="1l1.lol/2017/06/22/2017-06-22%20NOTES/"/>
+    <id>1l1.lol/2017/06/22/2017-06-22 NOTES/</id>
+    <published>2017-06-22T04:38:26.000Z</published>
+    <updated>2017-06-26T16:52:37.746Z</updated>
+    
+    <content type="html"><![CDATA[<h6>常见压缩文件</h6>
+
+<blockquote>
+<ul>
+<li>Windows .rar .zip .7z</li>
+<li>Linux .zip .gz .bz2 .tar.gz .tar.bz2 .tar.xz</li>
+</ul>
+</blockquote>
+<a id="more"></a>
+<h6>gzip压缩工具</h6>
+
+<p>gzip 文件名称   （压缩文件）</p>
+<p>gzip -1  -9  （压缩等级,默认为6级别）</p>
+<p>gzip -d 文件名称  （解压缩）</p>
+<p>gzip -c 文件名称</p>
+<ul>
+<li><p>gzip -c 1.txt &gt; /tmp/1.txt.gz (压缩的时候指定到一个文件路径并且源文件不消失)</p>
+</li>
+<li><p>gzip -d -c 1.txt /tmp///1.txt.gz &gt; /tmp /1/2.txt (解压缩到指定文件夹且源文件不消失)</p>
+</li>
+</ul>
+<p>file 压缩文件名称 （查看压缩文件信息）</p>
+<p>zcat 压缩文件名称 （查看压缩文件内容）</p>
+<div class="tip"><br><br>gzip 不能压缩目录<br><br></div>
+
+<h6>bzip2压缩工具</h6>
+
+<p><code>yum install -y bzip2</code> （安装bzip2）</p>
+<p>bzip2 文件名称  （压缩文件）（相比gzip 压缩更狠）</p>
+<p>bzip2 -d 文件名称 （解压文件）</p>
+<p>bzcat 压缩文件名称 （查看压缩文件内容）</p>
+<div class="tip"><br><br>bzip2 不能压缩目录<br><br></div>
+
+<h6>xz压缩工具</h6>
+
+<p>xz 文件名称 （压缩文件）（比bzip2压缩更狠）</p>
+<p>xz -d 文件名称 （解压缩）</p>
+<p>unxz 文件名称 （解压缩）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6&gt;常见压缩文件&lt;/h6&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows .rar .zip .7z&lt;/li&gt;
+&lt;li&gt;Linux .zip .gz .bz2 .tar.gz .tar.bz2 .tar.xz&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="gzip" scheme="1l1.lol/tags/gzip/"/>
+    
+      <category term="bzip" scheme="1l1.lol/tags/bzip/"/>
+    
+      <category term="xz" scheme="1l1.lol/tags/xz/"/>
+    
+  </entry>
   
   <entry>
     <title>2017-06-21 NOTES</title>
