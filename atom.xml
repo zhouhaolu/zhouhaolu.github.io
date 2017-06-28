@@ -131,14 +131,17 @@
     <link href="1l1.lol/2017/06/23/2017-06-23%20NOTES/"/>
     <id>1l1.lol/2017/06/23/2017-06-23 NOTES/</id>
     <published>2017-06-23T04:38:26.000Z</published>
-    <updated>2017-06-26T17:41:52.606Z</updated>
+    <updated>2017-06-28T03:51:10.167Z</updated>
     
     <content type="html"><![CDATA[<h6>zip压缩工具</h6>
 
+<blockquote>
 <p><code>yum install -y zip</code>（安装zip压缩）</p>
 <p><code>yum install -y unzip</code>（安装解压缩）</p>
 <p><code>zip 1.txt.zip 1.tx</code> （压缩文件）</p>
 <p><code>zip -r 1.zip  2.txt file</code> （压缩文件+目录）（zip压缩文件文件后源文件不删除）</p>
+</blockquote>
+<a id="more"></a>
 <p>unzip 压缩文件名称 （解压缩到当前目录下）</p>
 <p><code>unzip 1.txt.zip -d test/</code>（解压1.txt到test目录）</p>
 <div class="tip"><br><br>不能查看文件内容<br><br>文件压缩后不删除源文件<br><br></div>
@@ -161,9 +164,12 @@
     
       &lt;h6&gt;zip压缩工具&lt;/h6&gt;
 
+&lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;yum install -y zip&lt;/code&gt;（安装zip压缩）&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;yum install -y unzip&lt;/code&gt;（安装解压缩）&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;zip 1.txt.zip 1.t
+&lt;p&gt;&lt;code&gt;zip 1.txt.zip 1.tx&lt;/code&gt; （压缩文件）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;zip -r 1.zip  2.txt file&lt;/code&gt; （压缩文件+目录）（zip压缩文件文件后源文件不删除）&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -458,11 +464,11 @@
     </summary>
     
     
+      <category term="磁盘分区" scheme="1l1.lol/tags/%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/"/>
+    
       <category term="磁盘格式化" scheme="1l1.lol/tags/%E7%A3%81%E7%9B%98%E6%A0%BC%E5%BC%8F%E5%8C%96/"/>
     
       <category term="磁盘挂载" scheme="1l1.lol/tags/%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/"/>
-    
-      <category term="磁盘分区" scheme="1l1.lol/tags/%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/"/>
     
       <category term="手动增加swap空间" scheme="1l1.lol/tags/%E6%89%8B%E5%8A%A8%E5%A2%9E%E5%8A%A0swap%E7%A9%BA%E9%97%B4/"/>
     
@@ -566,13 +572,13 @@
     </summary>
     
     
-      <category term="磁盘分区" scheme="1l1.lol/tags/%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/"/>
-    
       <category term="df" scheme="1l1.lol/tags/df/"/>
     
       <category term="du" scheme="1l1.lol/tags/du/"/>
     
       <category term="fdisk" scheme="1l1.lol/tags/fdisk/"/>
+    
+      <category term="磁盘分区" scheme="1l1.lol/tags/%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/"/>
     
   </entry>
   
