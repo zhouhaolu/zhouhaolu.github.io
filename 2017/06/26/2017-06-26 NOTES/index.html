@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>2017-06-26 NOTES · H.Lの自习室</title><meta name="description" content="2017-06-26 NOTES - Haolu"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-light.css"><link rel="search" type="application/opensearchdescription+xml" href="1l1.lol/atom.xml" title="H.Lの自习室"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="http://oqlwx55ng.bkt.clouddn.com/icon-tech.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BOLG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/zhouhaolu" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">2017-06-26 NOTES</h1><div class="tags"><a href="/tags/rpm/" class="tag-title">#rpm</a><a href="/tags/yum/" class="tag-title">#yum</a><a href="/tags/yum本地仓库/" class="tag-title">#yum本地仓库</a></div><div class="post-info">Jun 26, 2017</div><div class="post-content"><p></p><h6>rpm</h6><p></p>
+<blockquote>
+<p>rpm -<em>*</em> 包名</p>
+<ul>
+<li><code>rpm -ivh 1.rpm</code> （安装rpm包）</li>
+<li><code>rpm -Uvh 1.rpm</code>  (升级rpm包文件)</li>
+<li><code>rpm -e 1</code>（卸载rpm包）</li>
+<li><code>rpm -qa</code> (查询安装的包)</li>
+<li><code>rpm -q</code>（查询某个包是某安装）</li>
+<li><code>rpm -qi</code> (查询指定包信息)</li>
+<li><code>rpm -ql</code> (列出包安装文件)</li>
+<li><code>rpm -qf 文件绝对路径</code> （查看一个文件由是哪个包安装的）</li>
+</ul>
+</blockquote>
+<a id="more"></a>
+<p></p><h6>yum</h6><br>yum <em>*</em>包名称<p></p>
+<ul>
+<li><code>yum list</code> （列出可用的rpm包）</li>
+<li><code>yum search</code> （搜索包）</li>
+<li><code>yum install -y</code> (安装包)</li>
+<li><code>yum grouplist</code>（列出安装组）</li>
+<li><code>yum groupinstall  ‘xx’</code>(安装组)</li>
+<li><code>yum remove</code> (卸载包)<br>yum upate -y`(跟包名升级包 不跟东西 升级所有东西)</li>
+<li><code>yum provides &quot;/*/***“</code></li>
+</ul>
+<p></p><h6>搭建本地yum仓库</h6><br>挂载镜像到/mnt目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cp -r /etc/yum.repos.d /etc/yum.repos.d.bak </div><div class="line">rm -f /etc/yum.repos.d/*</div></pre></td></tr></table></figure><p></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">vim /etc/yum.repos.d/dvd.repo</div><div class="line"></div><div class="line">//内容如下</div><div class="line"></div><div class="line">[dvd]</div><div class="line"></div><div class="line">name=install dvd</div><div class="line"></div><div class="line">baseurl=file:///mnt</div><div class="line"></div><div class="line">enable=1</div><div class="line"></div><div class="line">gpgcheck=0</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">yum clean all</div><div class="line"></div><div class="line">yum list</div></pre></td></tr></table></figure>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/06/27/2017-06-27 NOTES/" class="prev">PREV</a><a href="/2017/06/23/2017-06-23 NOTES/" class="next">NEXT</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC8yOTAwNS81NTc0"><script>(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');</script><noscript> Please activate JavaScript for write a comment in LiveRe</noscript>
+</div><div class="copyright"><p>© undefined - 2017 <a href="1l1.lol">Haolu</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/MikeCoder/hexo-theme-gandalfr" target="_blank">hexo-theme-gandalfr</a>.</p></div></footer></div><script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" crossorigin="anonymous"></script><script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js" crossorigin="anonymous"></script><script>$(document).ready(function() { $('pre').each(function(i, block) { hljs.highlightBlock(block); }); });</script></body></html>

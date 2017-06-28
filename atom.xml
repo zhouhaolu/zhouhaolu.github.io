@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="1l1.lol/"/>
-  <updated>2017-06-26T17:41:52.606Z</updated>
+  <updated>2017-06-28T03:49:18.980Z</updated>
   <id>1l1.lol/</id>
   
   <author>
@@ -14,6 +14,117 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2017-06-27 NOTES</title>
+    <link href="1l1.lol/2017/06/27/2017-06-27%20NOTES/"/>
+    <id>1l1.lol/2017/06/27/2017-06-27 NOTES/</id>
+    <published>2017-06-27T04:38:26.000Z</published>
+    <updated>2017-06-28T03:49:18.980Z</updated>
+    
+    <content type="html"><![CDATA[<p></p><h6>更换国内yum</h6><p></p>
+<blockquote>
+<p><code>cd /etc/yum.reposd.d/</code>（进入仓库目）</p>
+<p><code>curl -O http://mirrors.163.com/.help/CentOS7-Base-163.repo</code>（下载163源）</p>
+<p><code>yum clean all</code>(清除yum缓存)</p>
+<p><code>yum makecache</code>(生成yum缓存)</p>
+<p><code>yum install -y epel-release</code>（安装扩展源）</p>
+<p><code>yum list |grep epel</code>（查询扩展源）</p>
+<p><code>yum install -y vim --downloadonly</code> （yum 下载rpm包）</p>
+</blockquote>
+<a id="more"></a>
+<p><code>/var/cache/yum/x86_64/7/*</code>(下载后的路径)</p>
+<p><code>yum install -y vim --downloadonly --downloaddir=/tmp/</code>(指定yum包安装路径)</p>
+<p></p><h6>源码包安装</h6><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">cd /usr/local/src/</div><div class="line"></div><div class="line">wget http://mirrors.cnnic.cn/apache/httpd/httpd-2.2.32.tar.gz</div><div class="line">tar zxvf httpd-2.2.32.tar.gz cd httpd-2.2.32</div><div class="line"></div><div class="line">./configure --prefix=/usr/local/apache2</div><div class="line"></div><div class="line">make</div><div class="line"></div><div class="line">make install</div></pre></td></tr></table></figure><p></p>
+<p><code>echo $?</code> 如果返回0就是正常</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;/p&gt;&lt;h6&gt;更换国内yum&lt;/h6&gt;&lt;p&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;cd /etc/yum.reposd.d/&lt;/code&gt;（进入仓库目）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;curl -O http://mirrors.163.com/.help/CentOS7-Base-163.repo&lt;/code&gt;（下载163源）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;yum clean all&lt;/code&gt;(清除yum缓存)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;yum makecache&lt;/code&gt;(生成yum缓存)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;yum install -y epel-release&lt;/code&gt;（安装扩展源）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;yum list |grep epel&lt;/code&gt;（查询扩展源）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;yum install -y vim --downloadonly&lt;/code&gt; （yum 下载rpm包）&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="rpm" scheme="1l1.lol/tags/rpm/"/>
+    
+      <category term="yum" scheme="1l1.lol/tags/yum/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2017-06-26 NOTES</title>
+    <link href="1l1.lol/2017/06/26/2017-06-26%20NOTES/"/>
+    <id>1l1.lol/2017/06/26/2017-06-26 NOTES/</id>
+    <published>2017-06-26T04:38:26.000Z</published>
+    <updated>2017-06-28T03:30:08.793Z</updated>
+    
+    <content type="html"><![CDATA[<p></p><h6>rpm</h6><p></p>
+<blockquote>
+<p>rpm -<em>*</em> 包名</p>
+<ul>
+<li><code>rpm -ivh 1.rpm</code> （安装rpm包）</li>
+<li><code>rpm -Uvh 1.rpm</code>  (升级rpm包文件)</li>
+<li><code>rpm -e 1</code>（卸载rpm包）</li>
+<li><code>rpm -qa</code> (查询安装的包)</li>
+<li><code>rpm -q</code>（查询某个包是某安装）</li>
+<li><code>rpm -qi</code> (查询指定包信息)</li>
+<li><code>rpm -ql</code> (列出包安装文件)</li>
+<li><code>rpm -qf 文件绝对路径</code> （查看一个文件由是哪个包安装的）</li>
+</ul>
+</blockquote>
+<a id="more"></a>
+<p></p><h6>yum</h6><br>yum <em>*</em>包名称<p></p>
+<ul>
+<li><code>yum list</code> （列出可用的rpm包）</li>
+<li><code>yum search</code> （搜索包）</li>
+<li><code>yum install -y</code> (安装包)</li>
+<li><code>yum grouplist</code>（列出安装组）</li>
+<li><code>yum groupinstall  ‘xx’</code>(安装组)</li>
+<li><code>yum remove</code> (卸载包)<br>yum upate -y`(跟包名升级包 不跟东西 升级所有东西)</li>
+<li><code>yum provides &quot;/*/***“</code></li>
+</ul>
+<p></p><h6>搭建本地yum仓库</h6><br>挂载镜像到/mnt目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cp -r /etc/yum.repos.d /etc/yum.repos.d.bak </div><div class="line">rm -f /etc/yum.repos.d/*</div></pre></td></tr></table></figure><p></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">vim /etc/yum.repos.d/dvd.repo</div><div class="line"></div><div class="line">//内容如下</div><div class="line"></div><div class="line">[dvd]</div><div class="line"></div><div class="line">name=install dvd</div><div class="line"></div><div class="line">baseurl=file:///mnt</div><div class="line"></div><div class="line">enable=1</div><div class="line"></div><div class="line">gpgcheck=0</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">yum clean all</div><div class="line"></div><div class="line">yum list</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;/p&gt;&lt;h6&gt;rpm&lt;/h6&gt;&lt;p&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;rpm -&lt;em&gt;*&lt;/em&gt; 包名&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;rpm -ivh 1.rpm&lt;/code&gt; （安装rpm包）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rpm -Uvh 1.rpm&lt;/code&gt;  (升级rpm包文件)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rpm -e 1&lt;/code&gt;（卸载rpm包）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rpm -qa&lt;/code&gt; (查询安装的包)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rpm -q&lt;/code&gt;（查询某个包是某安装）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rpm -qi&lt;/code&gt; (查询指定包信息)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rpm -ql&lt;/code&gt; (列出包安装文件)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rpm -qf 文件绝对路径&lt;/code&gt; （查看一个文件由是哪个包安装的）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="rpm" scheme="1l1.lol/tags/rpm/"/>
+    
+      <category term="yum" scheme="1l1.lol/tags/yum/"/>
+    
+      <category term="yum本地仓库" scheme="1l1.lol/tags/yum%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/"/>
+    
+  </entry>
   
   <entry>
     <title>2017-06-23 NOTES</title>
@@ -347,11 +458,11 @@
     </summary>
     
     
-      <category term="磁盘分区" scheme="1l1.lol/tags/%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/"/>
-    
       <category term="磁盘格式化" scheme="1l1.lol/tags/%E7%A3%81%E7%9B%98%E6%A0%BC%E5%BC%8F%E5%8C%96/"/>
     
       <category term="磁盘挂载" scheme="1l1.lol/tags/%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/"/>
+    
+      <category term="磁盘分区" scheme="1l1.lol/tags/%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/"/>
     
       <category term="手动增加swap空间" scheme="1l1.lol/tags/%E6%89%8B%E5%8A%A8%E5%A2%9E%E5%8A%A0swap%E7%A9%BA%E9%97%B4/"/>
     
@@ -455,13 +566,13 @@
     </summary>
     
     
+      <category term="磁盘分区" scheme="1l1.lol/tags/%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/"/>
+    
       <category term="df" scheme="1l1.lol/tags/df/"/>
     
       <category term="du" scheme="1l1.lol/tags/du/"/>
     
       <category term="fdisk" scheme="1l1.lol/tags/fdisk/"/>
-    
-      <category term="磁盘分区" scheme="1l1.lol/tags/%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/"/>
     
   </entry>
   
