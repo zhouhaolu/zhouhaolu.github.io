@@ -55,9 +55,9 @@
     </summary>
     
     
-      <category term="rpm" scheme="1l1.lol/tags/rpm/"/>
-    
       <category term="yum" scheme="1l1.lol/tags/yum/"/>
+    
+      <category term="rpm" scheme="1l1.lol/tags/rpm/"/>
     
   </entry>
   
@@ -118,9 +118,9 @@
     </summary>
     
     
-      <category term="rpm" scheme="1l1.lol/tags/rpm/"/>
-    
       <category term="yum" scheme="1l1.lol/tags/yum/"/>
+    
+      <category term="rpm" scheme="1l1.lol/tags/rpm/"/>
     
       <category term="yum本地仓库" scheme="1l1.lol/tags/yum%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/"/>
     
@@ -464,11 +464,11 @@
     </summary>
     
     
-      <category term="磁盘分区" scheme="1l1.lol/tags/%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/"/>
-    
       <category term="磁盘格式化" scheme="1l1.lol/tags/%E7%A3%81%E7%9B%98%E6%A0%BC%E5%BC%8F%E5%8C%96/"/>
     
       <category term="磁盘挂载" scheme="1l1.lol/tags/%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/"/>
+    
+      <category term="磁盘分区" scheme="1l1.lol/tags/%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/"/>
     
       <category term="手动增加swap空间" scheme="1l1.lol/tags/%E6%89%8B%E5%8A%A8%E5%A2%9E%E5%8A%A0swap%E7%A9%BA%E9%97%B4/"/>
     
@@ -572,13 +572,13 @@
     </summary>
     
     
+      <category term="磁盘分区" scheme="1l1.lol/tags/%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/"/>
+    
       <category term="df" scheme="1l1.lol/tags/df/"/>
     
       <category term="du" scheme="1l1.lol/tags/du/"/>
     
       <category term="fdisk" scheme="1l1.lol/tags/fdisk/"/>
-    
-      <category term="磁盘分区" scheme="1l1.lol/tags/%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/"/>
     
   </entry>
   
